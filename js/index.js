@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const portfolioSection = document.querySelector('.portfolio-items');
+    const cardFrontRow = document.querySelector('.card-front-row');
+    const cardSecondRow = document.querySelector('.card-second-row');
   
-    window.addEventListener('scroll', function() {
-      const sectionPos = portfolioSection.getBoundingClientRect().top;
+    function makeVisible(element) {
+      const elementPos = element.getBoundingClientRect().top;
       const screenPos = window.innerHeight / 1.3;
   
-      if (sectionPos < screenPos) {
-        portfolioSection.classList.add('visible');
+      if (elementPos < screenPos) {
+        element.classList.add('visible');
       }
+    }
+  
+    window.addEventListener('scroll', function() {
+      makeVisible(cardFrontRow);
+      makeVisible(cardSecondRow);
     });
   });
