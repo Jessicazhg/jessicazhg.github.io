@@ -270,6 +270,7 @@ h2 {
   padding: 16px;
   overflow: hidden;
   transition: all 0.3s;
+  filter: grayscale(100%);
 }
 
 .card h2 {
@@ -288,6 +289,13 @@ h2 {
   border: 0 solid #000;
   outline: 1px solid #4b5563;
   background-color: rgba(237, 237, 237, 0.66);
+  filter: grayscale(0%); 
+
+  /* New rules to specifically target the image */
+  .card-image img {
+      filter: grayscale(0%);
+      opacity: 1;
+  }
 }
 
 .card-image img {
@@ -299,12 +307,7 @@ h2 {
   transition: all 0.3s;
 }
 
-.card-image img:hover {
 
-  filter: grayscale(0%);
-  opacity: 1;
-  transition: all 0.3s;
-}
 
 .card-front-row .card:nth-of-type(1) .card-image img,
 .card-front-row .card:nth-of-type(2) .card-image img{
