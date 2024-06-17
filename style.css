@@ -3,11 +3,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ededed;
-  background-image: url('../images/bk_yellow.png');
+  background-image: url('images/bk_yellow.png');
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+::-moz-selection { /* for firefox */
+  color: #ffffff;
+  background: #ee7f00;
+}
+::selection { /* for other browser*/
+  color: #ffffff; 
+  background: #ee7f00;
 }
 
 .navbarcontainer {
