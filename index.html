@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
   <title>Jessica Zhang's Portfolio</title>
   <style>
-
   </style>
 </head>
 
 <body>
-  
   <header>
     <div class="navbarcontainer">
       <div class="navbarcontainercontainer">
         <div class="logo">JZ.</div>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         <nav>
           <ul>
             <li><div class="headnavcurrent">My Work</div></li>
@@ -56,11 +54,11 @@
       </div>
     </section>
 
-    <section class="portfolio-items">
-      <div class="div-for-centering">
+  <section class="portfolio-items">
+    <div class="div-for-centering">
       <div class="card-front-row">
         <!-- Card 1 -->
-        <div class="card">
+        <a class="card" href="#">
           <div class="card-image">
               <img src="images/port1.png" alt="Project Image">
           </div>
@@ -71,10 +69,10 @@
               <span>UI / UX Design</span>
           </div>
           <p>A redesign of the current Animal Alliance of Canada website, enhancing aesthetics and optimizing user engagement and clarity.</p>
-        </div>
+        </a>
 
         <!-- Card 2 -->
-        <div class="card">
+        <a class="card" href="#">
           <div class="card-image">
               <img src="images/port2.png" alt="Project Image">
           </div>
@@ -85,12 +83,12 @@
              <span>UI / UX Design</span>
           </div>
           <p>A redesign of the current Canada Revenue Agency website ensuring easier navigation, resource accessibility, and streamlined user paths.</p>
-        </div>
+        </a>
       </div>
 
       <div class="card-second-row">
         <!-- Card 3 -->
-        <div class="card">
+        <a class="card" href="#">
           <div class="card-image">
               <img src="images/port3.png" alt="Project Image">
           </div>
@@ -101,10 +99,10 @@
              <span>UX Design</span>
           </div>
           <p>An AI-powered app streamlining travel planning with personalized recommendations, ensuring authentic local experiences and reliable reviews.</p>
-        </div>
+        </a>
 
         <!-- Card 4 -->
-        <div class="card">
+        <a class="card" href="#">
           <div class="card-image">
               <img src="images/port4.png" alt="Project Image">
           </div>
@@ -115,10 +113,10 @@
              <span>UX Design</span>
           </div>
           <p>A digital platform connecting users to local medical professionals, streamlining consultations and medication management.</p>
-        </div>
+        </a>
 
         <!-- Card 5 -->
-        <div class="card">
+        <a class="card" href="#">
           <div class="card-image">
               <img src="images/port5.png" alt="Project Image">
           </div>
@@ -129,19 +127,17 @@
              <span>UX Design</span>
           </div>
           <p>Bridging venue owners, artists, and fans; streamlining bookings, event management, and ticketing in the live music ecosystem.</p>
-        </div>
+        </a>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
   </main>
 
   <footer>
     <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
   </footer>
-
-
   <script src="js/index.js"></script>
-
+  <script src="js/navigation.js"></script>
+  <script src="js/drag.js"></script>
 </body>
-
 </html>
