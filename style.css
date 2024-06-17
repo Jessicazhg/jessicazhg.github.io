@@ -263,8 +263,8 @@ a.card {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 56px;
-  padding-bottom: 64px;
+  padding-top: 40px;
+  padding-bottom: 56px;
   display: flex;
 }
 
@@ -358,7 +358,7 @@ a.card {
 .card-second-row .card:nth-of-type(2) .card-image img,
 .card-second-row .card:nth-of-type(3) .card-image img{
   aspect-ratio: auto;
-  height: 360px;
+  height: 340px;
 }
 
 .tags {
@@ -485,16 +485,9 @@ footer {
 }
 
 @media (max-width: 1160px) {
-  .card-front-row, .card-second-row {
-    grid-template-columns: 1fr; /* Change to one column */
-    max-width: 560px;
-  }
+
   .heroimage h2 {
     font-size: 22px;
-  }
-
-  .card-front-row, .card-second-row, .div-for-centering {
-    gap: calc(1vw + 8px); /* Smaller gap for smaller screens */
   }
 
   .card-image img {
@@ -502,8 +495,26 @@ footer {
     height: auto;
     object-fit: cover; /* Maintain aspect ratio */
   }
+  .tags span{
+    font-size: 10px;
+  }
 }
-
+@media (max-width: 1060px) {
+  .card-front-row, .card-second-row {
+    grid-template-columns: 1fr; /* Change to one column */
+    max-width: 560px;
+  }
+  .card-front-row, .card-second-row, .div-for-centering {
+    gap: calc(1vw + 8px); /* Smaller gap for smaller screens */
+  }
+  .card-front-row .card:nth-of-type(1) .card-image img,
+  .card-front-row .card:nth-of-type(2) .card-image img{
+    height: 340px;
+  }
+  .tags span{
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 950px) {
   .aboutme_2column {
@@ -658,9 +669,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 5px; /* Adjust gap between tags if needed */
-  }
-  .tags span{
-    font-size: 12px;
   }
 }
 
