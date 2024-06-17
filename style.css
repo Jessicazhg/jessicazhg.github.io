@@ -69,11 +69,11 @@ section {
   font-weight: 300;
   position: relative; 
   outline-offset: 0px;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.2px;
   border-bottom: 0 #000;
   outline: 3px #000;
-  padding-right: 26px;
-  padding-left: 26px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 header {
@@ -114,8 +114,8 @@ nav a:hover {
   outline-offset: 0px;
   color: #ee7f00;
   -webkit-text-stroke-width: 1px;
-  border-bottom: 0 #000;
-  outline: 3px #000;
+  border-bottom: 0 #ee7f00;
+  outline: 3px #ee7f00;
 }
 
 h1 {
@@ -254,8 +254,7 @@ a.card {
 
 .portfolio-categories-centered .not-current:hover {
   color: white;
-  background-color: rgba(238, 127, 0, 0.5)
-  ;
+  background-color: black;
 }
 
 .portfolio-items {
