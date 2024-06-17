@@ -25,75 +25,6 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-
-.project-hero {
-  width: 100%;
-  padding-top: 40px;
-  text-align: center;
-}
-
-.project-hero-content img {
-  width: 100%;
-  height: auto;
-}
-
-.project-details {
-  width: 100%;
-  padding: 60px;
-  background-color: #722bd3; /* Adjust the color to match the purple shade in the image */
-  color: white;
-  display: flex; /* Use flexbox to create columns */
-  justify-content: center;
-  align-items: flex-start; /* Align items at the top */
-}
-
-.project-details-container {
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 30px; /* Center the container */
-}
-
-.project-details-left,
-.project-details-right {
-  padding: 0 20px; /* Add some padding for better spacing */
-}
-
-.project-details-left {
-  flex: 1.25; /* Left column takes 1 part of the space */
-  display: flex;
-  justify-content: center; /* Center the content horizontally and vertically */
-}
-
-.project-details-right {
-  flex: 2.75; /* Right column takes 2.75 parts of the space */
-  display: flex;
-  flex-direction: column;
-}
-
-.project-details-info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 20px; /* Add space between items */
-}
-
-.project-details-info div {
-  flex: 1;
-  min-width: 120px; /* Ensure items don't get too small */
-}
-
-.project-details h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.project-details p {
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 20px;
-}
 </style>
 
 <body class="voyager-vertex-page">
@@ -119,7 +50,6 @@ body {
           <img src="../../images/projects/voyagervertex-hero.png" alt="Voyager Vertex Hero Image">
         </div>
       </section>
-  
       <section class="project-details" style="max-width: none;">
         <div class="project-details-container">
             <div class="project-details-left">
@@ -127,7 +57,7 @@ body {
             </div>
             <div class="project-details-right">
               <p>VoyagerVertex, the "Traveler's Touchstone", is an all-in-one travel planning tool tailored for modern explorers. By integrating AI with crowd-sourced data, it offers an intuitive platform for travelers to craft, refine, and experience journeys that align with their unique tastes. With personalized recommendations and genuine reviews, users can dive deep into authentic local experiences without the usual travel hassles.</p>
-              <p>This is a project for UofT SCS UX/UI Design bootcamp.</p>
+              <p>This is a project for <a href="https://bootcamp.learn.utoronto.ca/ux-ui/" target="_blank">UofT SCS UX/UI Design bootcamp</a>.</p>
               
               <div class="project-details-info">
                 <div>
@@ -153,11 +83,18 @@ body {
             </div>
           </div>
       </section>
+      <section class="workinprogress" style="max-width: none;">
+        <div class="wipcontainer">
+            <h2>🔧 Work in Progress!</h2>
+            <p>Thank you for visiting this project page. I'm currently refining the details to provide an optimal viewing experience. In the meantime, if you're keen on learning more about this project, please check out the Google Slide version I've prepared.
+            </p>
+            <a href="https://docs.google.com/presentation/d/1sZ7TV0wci4kbCa1woTaHbIIuUzeqN5Z0COf1xxHawqk" target="_blank" class="google-slide-link">View Google Slide</a>
+        </div>
+      </section>
     </main>
-  
     <footer>
       <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
     </footer>
-    <script src="js/navigation.js"></script>
+    <script src="../../js/navigation.js"></script>
   </body>
   </html>
