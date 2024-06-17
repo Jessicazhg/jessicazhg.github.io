@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoyagerVertex | Jessica Zhang's Portfolio</title>
+  <link href="../../style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="../../images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+::-moz-selection { /* for firefox */
+  color: #ffffff;
+  background: rgb(50 50 50);
+}
+::selection { /* for other browser*/
+  color: #ffffff; 
+  background: rgb(50 50 50);
+}
+
+body {
+  background-image: url('/images/projects/bk_purple.png');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.project-hero {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.project-hero-content img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  width: 100%;
+  padding: 60px;
+  background-color: #722bd3; /* Adjust the color to match the purple shade in the image */
+  color: white;
+  display: flex; /* Use flexbox to create columns */
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.project-details-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 30px; /* Center the container */
+}
+
+.project-details-left,
+.project-details-right {
+  padding: 0 20px; /* Add some padding for better spacing */
+}
+
+.project-details-left {
+  flex: 1.25; /* Left column takes 1 part of the space */
+  display: flex;
+  justify-content: center; /* Center the content horizontally and vertically */
+}
+
+.project-details-right {
+  flex: 2.75; /* Right column takes 2.75 parts of the space */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Add space between items */
+}
+
+.project-details-info div {
+  flex: 1;
+  min-width: 120px; /* Ensure items don't get too small */
+}
+
+.project-details h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.project-details p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+</style>
+
+<body class="voyager-vertex-page">
+    <header>
+        <div class="navbarcontainer">
+          <div class="navbarcontainercontainer">
+            <div class="logo">JZ.</div>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+              <ul>
+                <li><a href="/">My Work</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="https://drive.google.com/file/d/1d8838TWhvDpoSpdN_twFBc2fIOZjrX02/view?usp=sharing" target="_blank">Download Resume</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+  
+    <main>
+      <section class="project-hero">
+        <div class="project-hero-content">
+          <img src="../../images/projects/voyagervertex-hero.png" alt="Voyager Vertex Hero Image">
+        </div>
+      </section>
+  
+      <section class="project-details" style="max-width: none;">
+        <div class="project-details-container">
+            <div class="project-details-left">
+              <h2>VoyagerVertex</h2>
+            </div>
+            <div class="project-details-right">
+              <p>VoyagerVertex, the "Traveler's Touchstone", is an all-in-one travel planning tool tailored for modern explorers. By integrating AI with crowd-sourced data, it offers an intuitive platform for travelers to craft, refine, and experience journeys that align with their unique tastes. With personalized recommendations and genuine reviews, users can dive deep into authentic local experiences without the usual travel hassles.</p>
+              <p>This is a project for UofT SCS UX/UI Design bootcamp.</p>
+              
+              <div class="project-details-info">
+                <div>
+                  <h2>Team</h2>
+                  <p>Individual</p>
+                </div>
+                
+                <div>
+                  <h2>Duration</h2>
+                  <p>3 Weeks</p>
+                </div>
+                
+                <div>
+                  <h2>Role</h2>
+                  <p>UX Researcher, App Designer</p>
+                </div>
+                
+                <div>
+                  <h2>Time</h2>
+                  <p>Jul 01 2023 ~ Jul 22 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
+    </footer>
+    <script src="js/navigation.js"></script>
+  </body>
+  </html>
