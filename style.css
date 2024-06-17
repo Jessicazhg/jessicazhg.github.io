@@ -383,7 +383,7 @@ a.card {
 
 footer {
   text-align: center;
-  padding: 10px 0;
+  padding: 4px 0;
   border: 0 solid #4b5563;
   border-top-width: 1px;
 }
@@ -544,7 +544,7 @@ footer {
   }
   .card-front-row .card:nth-of-type(1) .card-image img,
   .card-front-row .card:nth-of-type(2) .card-image img{
-    height: 340px;
+    height: 300px;
   }
   .tags span{
     font-size: 12px;
@@ -712,7 +712,8 @@ footer {
     font-size: 11px;
   }
   .card h2{
-    font-size: 24px;
+    font-size: 23px;
+    margin-top: 14px;
   }
   .card p{
     font-size: 15px;
