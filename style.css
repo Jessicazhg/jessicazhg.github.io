@@ -494,6 +494,10 @@ footer {
     height: auto;
   }
 
+  .aboutme {
+    grid-row-gap: 32px;
+  }
+
   .aboutme h1 {
     font-size: 56px; /* Adjust font size */
     line-height: 24px;
@@ -506,7 +510,7 @@ footer {
 
   .aboutme h3 {
     font-size: 18px; /* Adjust font size */
-    margin-top: 32px;
+    margin-top: 22px;
   }
 
   .heroimage h1 {
@@ -675,6 +679,11 @@ footer {
 }
 
 @media (max-width: 460px) {
+
+  .aboutme {
+    grid-row-gap: 28px;
+  }
+
   .heroimage h1 {
     font-size: 72px;
   }
@@ -694,6 +703,10 @@ footer {
   .aboutme h2 {
     font-size: 17px; /* Adjust font size */
     line-height: 23px;
+  }
+
+  .aboutme h3 {
+    margin-top: 20px;
   }
   .tags span{
     font-size: 11px;
