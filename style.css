@@ -392,13 +392,23 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three images per row */
   gap: 16px; /* Space between images */
+  margin-bottom: 16px; /* Gap between image grids */
+  justify-content: center; /* Center the images */
 }
 
-.image-grid img {
+.image-grid img, .image-grid2 img {
   width: 100%;
   height: auto;
   border: 1px solid black; /* 1px black border */
   box-sizing: border-box;
+}
+
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Three images per row */
+  gap: 16px; /* Space between images */
+  margin-bottom: 16px; /* Gap between image grids */
+  justify-content: center; /* Center the images */
 }
 
 .aboutme{
@@ -553,6 +563,13 @@ footer {
   .herocolumnB{
     height: 270px;
   }
+  .image-grid, .image-grid2 {
+    grid-template-columns: 1fr; /* One image per row */
+    max-width: 560px;
+    margin-left: auto; /* Center the grid */
+    margin-right: auto; /* Center the grid */
+    gap: 16px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -599,6 +616,9 @@ footer {
 }
 
 @media (max-width: 560px) {
+  .heroimage{
+    padding-top: 24px;
+  }
   nav ul {
     display: none;
     flex-direction: column;
