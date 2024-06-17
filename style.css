@@ -265,7 +265,7 @@ h2 {
 
 .card-front-row, .card-second-row {
   display: grid;
-  gap: 60px;
+  gap: calc(1vw + 8px); /* Use a combination of vw and a base value */
   width: auto; 
   max-width: 1200px;
   opacity: 0;
@@ -436,6 +436,10 @@ footer {
     flex-direction: column;
   }
 
+  .card-front-row, .card-second-row {
+    gap: calc(0.5vw + 8px); /* Smaller gap for smaller screens */
+  }
+
   .aboutmecolumnA,
   .aboutmecolumnB {
     width: 100%;
@@ -458,5 +462,69 @@ footer {
 
   .aboutme h3 {
     font-size: 18px; /* Adjust font size */
+  }
+
+  .heroimage h1 {
+    font-size: 128px;
+  }
+
+}
+
+@media (max-width: 1160px) {
+  .card-front-row, .card-second-row {
+    grid-template-columns: 1fr; /* Change to one column */
+    max-width: 560px;
+  }
+  .heroimage h2 {
+    font-size: 22px;
+  }
+
+  .card-front-row, .card-second-row, .div-for-centering {
+    gap: calc(1vw + 8px); /* Smaller gap for smaller screens */
+  }
+}
+
+
+
+@media (max-width: 1060px) {
+  .card-front-row, .card-second-row {
+  }
+}
+
+@media (max-width: 950px) {
+  .heroimage h1 {
+    font-size: 104px;
+  }
+  .heroimage h2 {
+    font-size: 19px;
+  }
+  .herocolumnB{
+    height: 270px;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroimage{
+    padding-top: 40px;
+  }
+  .hero2column {
+    flex-direction: column;
+  }
+  .herocolumnB{
+    padding: 0px;
+    height: 190px;
+    max-width: 608px;
+  }
+}
+
+@media (max-width: 460px) {
+  .heroimage h1 {
+    font-size: 72px;
+  }
+  .heroimage h2 {
+    font-size: 16px;
+  }
+  .herocolumnB{
+    height: 180px;
   }
 }
