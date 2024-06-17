@@ -432,9 +432,6 @@ footer {
 }
 
 @media (max-width: 1240px) {
-  .aboutme_2column {
-    flex-direction: column;
-  }
 
   .card-front-row, .card-second-row {
     gap: calc(0.5vw + 8px); /* Smaller gap for smaller screens */
@@ -456,12 +453,13 @@ footer {
   }
 
   .aboutme h2 {
-    font-size: 18px; /* Adjust font size */
+    font-size: 19px; /* Adjust font size */
     line-height: 28px;
   }
 
   .aboutme h3 {
     font-size: 18px; /* Adjust font size */
+    margin-top: 32px;
   }
 
   .heroimage h1 {
@@ -485,13 +483,13 @@ footer {
 }
 
 
-
-@media (max-width: 1060px) {
-  .card-front-row, .card-second-row {
-  }
-}
-
 @media (max-width: 950px) {
+  .aboutme_2column {
+    flex-direction: column;
+  }
+  .aboutme{
+    padding-top: 72px;
+  }
   .heroimage h1 {
     font-size: 104px;
   }
@@ -522,9 +520,26 @@ footer {
     font-size: 72px;
   }
   .heroimage h2 {
-    font-size: 16px;
+    font-size: 17px;
   }
   .herocolumnB{
-    height: 180px;
+    height: 185px;
+  }
+  .aboutme{
+    padding-top: 56px;
+  }
+  .aboutme h1 {
+    font-size: 48px; /* Adjust font size */
+  }
+
+  .aboutme h2 {
+    font-size: 17px; /* Adjust font size */
+    line-height: 23px;
+  }
+}
+
+@media (max-width: 370px) {
+  .herocolumnB{
+    height: 205px;
   }
 }
