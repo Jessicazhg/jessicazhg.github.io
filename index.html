@@ -7,6 +7,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
   <title>Jessica Zhang's Portfolio</title>
   <style>
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
   </style>
 </head>
 
@@ -27,7 +41,7 @@
     </div>
   </header>
 
-  <main>
+<main>
     <section class="heroimage">
       <div class="appenrently-i-need-another-div-to-center-this">
         <div class="hero2column">
@@ -48,13 +62,13 @@
 
     <section class="portfolio-categories">
       <div class="portfolio-categories-centered">
-        <a href="#" class="current"> UI / UX Case Studies </a>
-        <a href="#" class="not-current"> Graphic Designs</a>
-        <a href="#" class="not-current"> 3D Models</a>
+        <a id="ui-ux-case-studies" href="#" class="current" data-section="ui-ux-section">UI / UX Case Studies</a>
+        <a id="graphic-designs" href="#" class="not-current" data-section="graphic-designs-section">Graphic Designs</a>
+        <a id="3d-models" href="#" class="not-current" data-section="3d-models-section">3D Models</a>
       </div>
     </section>
 
-  <section class="portfolio-items">
+    <section id="ui-ux-section" class="portfolio-items">
     <div class="div-for-centering">
       <div class="card-front-row">
         <!-- Card 1 -->
@@ -130,8 +144,17 @@
         </a>
       </div>
     </div>
+    </section>
+
+    <section id="graphic-designs-section" class="portfolio-items" style="display:none;">
+      <div class="image-grid">
+          <img src="images/img1.png" alt="Graphic Design 1">
+          <img src="images/img2.png" alt="Graphic Design 2">
+          <img src="images/img3.png" alt="Graphic Design 3">
+          <!-- Add more images as needed -->
+      </div>
   </section>
-  </main>
+</main>
 
   <footer>
     <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
@@ -139,5 +162,7 @@
   <script src="js/index.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/drag.js"></script>
+
+
 </body>
 </html>
