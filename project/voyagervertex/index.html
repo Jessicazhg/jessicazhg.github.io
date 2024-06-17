@@ -25,12 +25,21 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+
+.navbarcontainer {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  background-color: #ededed; /* Optional: Add a background color to avoid transparency issues */
+  box-shadow: 0 5px 10px rgba(114,43,211, 0.15); /* Optional: Add a shadow for better visibility */
+}
+
 </style>
 
 <body class="voyager-vertex-page">
-    <header>
-        <div class="navbarcontainer">
-          <div class="navbarcontainercontainer">
+    <header class="navbarcontainer">
+        <div class="navbarcontainercontainer">
             <div class="logo">JZ.</div>
             <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
             <nav>
@@ -40,9 +49,8 @@ body {
                 <li><a href="https://drive.google.com/file/d/1d8838TWhvDpoSpdN_twFBc2fIOZjrX02/view?usp=sharing" target="_blank">Download Resume</a></li>
               </ul>
             </nav>
-          </div>
         </div>
-      </header>
+    </header>
   
     <main>
       <section class="project-hero">
