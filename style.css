@@ -607,7 +607,7 @@ footer {
 }
 
 /* Style for the Google Slide link */
-.google-slide-link {
+.google-slide-link, .nibutton-link {
   display: inline-block;
   background-color: #722bd3; /* Purple background */
   color: white;
@@ -668,6 +668,57 @@ footer {
   padding: 0px 0px 10px 0px;
 }
 
+.notinterested {
+  background-color: #ededed;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  max-width: none;
+}
+
+.nicontainer {
+  max-width: 1200px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nicontainer h2{
+  font-size: 36px;
+  font-family: Vollkorn, serif;
+  margin-top: 0px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.nicontainer p{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Hover effect for the Google Slide link */
+.nibutton-link:hover {
+  background-color: black; /* White background on hover */
+  color: white; /* Purple text on hover */
+}
+
+.line-divider {
+  height: 1px;
+  max-width: 1200px;
+  text-align: left;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .waybackmachine{
   max-width: none;
   padding: 0px 20px 40px 20px;
@@ -681,6 +732,7 @@ footer {
   height: auto;
   display: block; /* Remove extra space below the image */
 }
+
 
 @media (max-width: 1240px) {
   
@@ -838,13 +890,27 @@ footer {
     padding: 10px 16px;
     font-size: 17px;
   }
+
+  .regulartextarea h2{
+    font-size: 20px;
+  }
+
+  .regulartextarea p{
+    font-size: 16px;
+  }
+
+
   .project-details-container h2{
     font-size: 18px;
   }
 
-  .wipcontainer h2{
+  .wipcontainer h2, .nicontainer h2{
     font-size: 30px;
     margin-top: 0px;
+  }
+
+  .google-slide-link, .nibutton-link{
+    font-size: 16px;
   }
   .project-details-container p, .wipcontainer p{
     font-size: 16px;
