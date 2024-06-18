@@ -9,6 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <style>
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 ::-moz-selection { /* for firefox */
   color: #ffffff;
   background: rgb(50 50 50);
@@ -19,7 +29,7 @@
 }
 
 body {
-  background-image: url('/images/projects/bk_blue.png');
+  background-image: url('/images/projects/bk_orange.png');
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: fixed;
@@ -37,7 +47,7 @@ nav a:hover {
   top: 0;
   z-index: 1000; /* Ensures the navbar is on top of other elements */
   background-color: #ededed; /* Optional: Add a background color to avoid transparency issues */
-  box-shadow: 0 5px 10px rgba(47, 60, 180, 0.1); /* Optional: Add a shadow for better visibility */
+  box-shadow: 0 5px 10px rgba(229, 83, 0, 0.1); /* Optional: Add a shadow for better visibility */
 }
 
 .project-details{
@@ -104,6 +114,7 @@ nav a:hover {
           </div>
       </section>
 
+      
       <section class="notinterested">
         <div class="nicontainer">
             <h2>Not interested in my design process?
@@ -112,7 +123,9 @@ nav a:hover {
         </div>
       </section>
 
-      <div class="line-divider"></div>
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
 
       <section class="regularwhitebk" style="padding-bottom: 0px;">
         <div class="regulartextarea">
@@ -140,23 +153,101 @@ nav a:hover {
         <img src="../../images/projects/crawayback.png" alt="CRA Screenshots">
       </section>
 
+      <section class="line-divider-sec">
       <div class="line-divider"></div>
+      </section>
 
-      <section class="regularwhitebk" style="padding-bottom: 0px;">
+      <section class="regularwhitebk">
         <div class="regulartextarea">
           <div class="regular-text-section">
             <h2>‍User Research</h2>
             <p>To prepare for usability testing, I created a proto persona and user path analysis to define objectives for Guerrilla usability testing.</p>
             <p>Five participants tested the login process and the navigation for downloading tax forms. Feedback revealed that while most could log in and find the T2125 form, <b>website navigation was challenging</b>, highlighting the need for a <b>more user-friendly homepage</b> and <b>improved content organization</b>.</p>
           </div>
+          <div class="regular-text-section">
+            <div class="image-row">
+              <div class="image-item">
+                <img src="../../images/projects/cra_ProtoPersona.png" alt="Proto Persona" onclick="openLightbox(this)">
+                <p>Proto Persona</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/cra_DefineUserPath.png" alt="User Path Analysis" onclick="openLightbox(this)">
+                <p>User Path Analysis</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/cra_UsabilityTest.png" alt="Usability Testing" onclick="openLightbox(this)">
+                <p>Usability Testing</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/cra_AffinityDiagram.png" alt="Affinity Diagram" onclick="openLightbox(this)">
+                <p>Affinity Diagram</p>
+              </div>
+            </div>
+          </div>
+          <div class="regular-text-section">
+            <p>Following the initial research phase, a heuristic evaluation was performed on five specific web pages of the CRA website. This assessment aimed to pinpoint and emphasize areas that necessitated immediate enhancements and rectification.
+            </p>
+            <img src="../../images/projects/cra_HeuristicEvaluationChecklist.png" alt="Heuristic Evaluation Checklist" style="border: none; max-width: 960px;">
+          </div>
         </div>
       </section>
 
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Moodboard</h2>
+            <p>A moodboard is a curated collection of visuals, colors, and design elements that define a project's aesthetic. For the CRA website redesign, it established a cohesive visual direction and aligned design choices with the intended user experience and branding.</p>
+            <img src="../../images/projects/cra_Moodboard.png" alt="Moodboard" style="border: none;">
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Information Architecture</h2>
+            <p>During the Information Architecture stage, an in-depth navigation analysis was conducted to optimize the CRA website. Identifying inefficiencies, a card sorting exercise reorganized all pages into new primary and secondary categories, ensuring intuitive navigation. Insights from this exercise led to the development of a comprehensive sitemap.</p>
+          </div>
+          <div class="regular-text-section">
+            <div class="image-row-3">
+              <div class="image-item">
+                <img src="../../images/projects/cra_NavigationAnalysis.png" alt="Navigation Analysis" onclick="openLightbox(this)">
+                <p>Navigation Analysis</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/cra_CardSorting.png" alt="Card Sorting" onclick="openLightbox(this)">
+                <p>Card Sorting</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/cra_Sitemap.png" alt="Sitemap" onclick="openLightbox(this)">
+                <p>Sitemap</p>
+              </div>
+            </div>
+          </div>
+          <div class="regular-text-section">
+            <p style="text-align: center; padding-bottom: 20px;">Based on the refined sitemap, a prototype for the navigation and footer was then crafted.</p>
+            <img src="../../images/projects/cra_nav.gif" alt="NavigationNew" style="border: none; max-width: 1080px;">
+          </div>
+        </div>
+      </section>
 
     </main>
     <footer>
       <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
     </footer>
     <script src="../../js/navigation.js"></script>
+    <script src="../../js/lightbox.js"></script>
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
   </body>
   </html>
