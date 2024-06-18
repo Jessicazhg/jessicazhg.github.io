@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function makeVisible(element) {
       if (element) {
           const elementPos = element.getBoundingClientRect().top;
-          const screenPos = window.innerHeight / 1.3;
+          const screenPos = window.innerHeight / 1;
           if (elementPos < screenPos) {
               element.classList.add('visible');
           }

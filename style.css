@@ -626,7 +626,7 @@ footer {
 }
 
 @media (max-width: 1240px) {
-
+  
   .card-front-row, .card-second-row {
     gap: calc(0.5vw + 8px); /* Smaller gap for smaller screens */
   }
