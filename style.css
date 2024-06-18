@@ -635,7 +635,7 @@ footer {
 .regularwhitebk, .finalwhitebk{
   background-color: #ededed;
   max-width: none;
-  padding: 40px 0;
+  padding: 36px 0;
   margin: 0;
   display: flex;
   align-items: center;
@@ -793,6 +793,22 @@ footer {
 .image-item p {
   margin-top: 8px;
   font-size: 14px;
+}
+
+.image-row-4-non {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.image-row-non {
+  text-align: center;
+}
+
+.image-row-non img {
+  width: 100%;
+  height: auto;
+  max-width: 240px;
 }
 
 .lightbox {
@@ -954,6 +970,9 @@ footer {
   }
 }
 @media (max-width: 1060px) {
+  .regularwhitebk, .finalwhitebk{
+    padding: 16px 0;
+  }
   .card-front-row, .card-second-row {
     grid-template-columns: 1fr; /* Change to one column */
     max-width: 560px;
@@ -1028,6 +1047,9 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .regularwhitebk, .finalwhitebk{
+    padding: 8px 0;
+  }
   .heroimage{
     padding-top: 40px;
   }
@@ -1046,6 +1068,10 @@ footer {
   .portfolio-categories{
     height: 80px;
   }
+  .image-row-4-non {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+  }
 }
 
 @media (max-width: 630px) {
@@ -1059,6 +1085,9 @@ footer {
 }
 
 @media (max-width: 590px) {
+  .regularwhitebk, .finalwhitebk{
+    padding: 0px 0;
+  }
   .portfolio-categories-centered {
     grid-column-gap: 8px;
   }
@@ -1105,6 +1134,11 @@ footer {
 }
 
 @media (max-width: 560px) {
+  .three-column-container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
   .heroimage{
     padding-top: 24px;
   }
@@ -1159,6 +1193,9 @@ footer {
   .portfolio-categories-centered a {
     display: inline-block;
     margin-right: 10px;
+  }
+  .image-row-4-non {
+    row-gap: 36px;
   }
 
 }
