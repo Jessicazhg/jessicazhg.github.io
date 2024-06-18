@@ -793,6 +793,7 @@ footer {
 .image-item p {
   margin-top: 8px;
   font-size: 14px;
+  color: #888;
 }
 
 .image-row-4-non {
@@ -1124,6 +1125,10 @@ footer {
   .project-details-container p, .wipcontainer p{
     font-size: 16px;
     line-height: 26px;
+  }
+
+  .image-item p {
+    font-size: 13px;
   }
 }
 
