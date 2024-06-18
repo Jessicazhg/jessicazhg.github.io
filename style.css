@@ -688,7 +688,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  padding: 56px 0;
   margin: 0 auto;
   width: 100%;
   text-align: center;
@@ -992,6 +992,10 @@ footer {
 
   .regulartextarea h2{
     font-size: 20px;
+  }
+
+  .regulartextarea h3{
+    font-size: 18px;
   }
 
   .regulartextarea p{
