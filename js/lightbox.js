@@ -2,8 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
   function openLightbox(img) {
     var lightbox = document.getElementById('lightbox');
     var lightboxImg = document.getElementById('lightbox-img');
+    var largeSrc = img.getAttribute('data-large-src');
+
+    if (largeSrc) {
+      lightboxImg.src = largeSrc;
+    } else {
+      lightboxImg.src = img.src;
+    }
+
     lightbox.style.display = 'block';
-    lightboxImg.src = img.src;
     lightbox.classList.add('fade-in'); // Add fade-in class to apply animation
   }
 

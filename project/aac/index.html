@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Alliance of Canada Website Redesign | Jessica Zhang's Portfolio</title>
+  <link href="../../style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="../../images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-moz-selection { /* for firefox */
+  color: #ffffff;
+  background: rgb(50 50 50);
+}
+::selection { /* for other browser*/
+  color: #ffffff; 
+  background: rgb(50 50 50);
+}
+
+body {
+  background-image: url('/images/projects/bk_green.png');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+nav a:hover {
+  color: #1ca06d;
+  outline: 3px #1ca06d;
+}
+
+.navbarcontainer {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  background-color: #ededed; /* Optional: Add a background color to avoid transparency issues */
+  box-shadow: 0 8px 24px rgba(28, 160, 109, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+.project-details{
+  background-color: #1ca06d;
+}
+
+.nibutton-link {
+  background-color: #1ca06d;
+}
+
+.regulartextarea a {
+    color: #1ca06d;
+}
+
+.regulartextarea a:hover {
+  -webkit-text-stroke-color: #1ca06d; /* Set text stroke color to white on hover */
+}
+
+.three-column-box{
+  background-color: #1ca06d;
+}
+
+</style>
+
+<body class="voyager-vertex-page">
+    <header class="navbarcontainer">
+        <div class="navbarcontainercontainer">
+            <div class="logo">JZ.</div>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+              <ul>
+                <li><a href="/">My Work</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="https://drive.google.com/file/d/1d8838TWhvDpoSpdN_twFBc2fIOZjrX02/view?usp=sharing" target="_blank">Download Resume</a></li>
+              </ul>
+            </nav>
+        </div>
+    </header>
+  
+    <main>
+      <section class="project-hero">
+        <div class="project-hero-content">
+          <img src="../../images/projects/aac-hero.png" alt="AAC Hero Image">
+        </div>
+      </section>
+      <section class="project-details" style="max-width: none;">
+        <div class="project-details-container">
+            <div class="project-details-left">
+              <h2>Animal Alliance of Canada Website Redesign</h2>
+            </div>
+            <div class="project-details-right">
+              <p>The AAC website previously suffered from unclear call-to-action buttons, lackluster aesthetics, and a missing style guide and grid system. Our group undertook a redesign to address these issues, enhancing the site's visual appeal and usability, ensuring AAC's message resonates more effectively with visitors.</p>
+              <p>This is a project for <a href="https://bootcamp.learn.utoronto.ca/ux-ui/" target="_blank">UofT SCS UX/UI Design bootcamp</a>.</p>
+              <div class="project-details-info">
+                <div>
+                  <h2>Team</h2>
+                  <p>3 Designers</p>
+                </div>
+                
+                <div>
+                  <h2>Duration</h2>
+                  <p>3 Weeks</p>
+                </div>
+                
+                <div>
+                  <h2>Role</h2>
+                  <p>UX Researcher, Web Designer</p>
+                </div>
+                
+                <div>
+                  <h2>Time</h2>
+                  <p>Sept 18 2023 ~ Oct 04 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      
+      <section class="notinterested">
+        <div class="nicontainer">
+            <h2>Not interested in my design process?
+            <br>That's perfectly okay!</h2>
+            <a href="#finalproduct" class="nibutton-link">Teleport to the Final Product</a>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk" style="padding-bottom: 0px;">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Background</h2>
+            <p>The Animal Alliance of Canada (AAC) is a federally incorporated non-profit dedicated to protecting animals and fostering harmony between humans, animals, and the environment. Since 1990, they have utilized electoral politics and lobbying to advocate for robust animal and environmental protection laws.
+            </p>
+          </div>
+          <div class="regular-text-section">
+            <h2>The Problem</h2>
+            <p>‍While AAC's mission is impactful, their website's design fell short in effectively conveying their message and encouraging engagement. The challenges identified were: ‍
+            <ul>
+              <li>Lack of clarity in the website's call-to-action, including a confusing donation process.</li>
+              <li>An outdated aesthetic that lacked a cohesive style guide and grid system.</li>
+              <li>Inefficient user interface elements, such as poor spacing and content layout, that hindered user engagement.</li>
+            </ul>
+            </p>
+          </div>
+          <div class="regular-text-section">
+            <a href="https://web.archive.org/web/20230918154613/https://www.animalalliance.ca/" target="_blank" style="padding-top: 10px;">>> Click to see wayback machine capture on Sept 18 2023 <<</a>
+          </div>
+        </div>
+      </section>
+      <section class="waybackmachine">
+        <img src="../../images/projects/aacwayback.png" alt="AAC Screenshots">
+      </section>
+
+      <section class="line-divider-sec">
+      <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>‍User Research</h2>
+            <p>To holistically understand users' perception and areas of improvement for the Animal Alliance of Canada's website, we structured our inquiries based on specific research objectives. Here are some examples of our questions:</p>
+          </div>
+          <div class="regular-text-section research-cards">
+            <div class="research-card">
+              <div class="card-header">
+                <div class="icon-svg">
+                  <img src="../../images/projects/aac_navigation-icon.svg" alt="Navigation Icon">
+                </div>
+                <h3>Navigation, Layout and Aesthetics</h3>
+              </div>
+              <hr>
+              <p>“What do you think Animal Alliance’s mission and goals are?”</p>
+              <p>“How would you describe the first impressions of the website’s visual aesthetics?”</p>
+            </div>
+            <div class="research-card">
+              <div class="card-header">
+                <div class="icon-svg">
+                  <img src="../../images/projects/aac_intuitiveness-icon.svg" alt="Intuitiveness Icon">
+                </div>
+                <h3>Intuitiveness of Current User Flow</h3>
+              </div>
+              <hr>
+              <p>“What do you think about how the articles are laid out and formatted?”</p>
+              <p>“How would you rate the clarity and simplicity of the website’s call-to-action buttons and prompts?”</p>
+            </div>
+            <div class="research-card">
+              <div class="card-header">
+                <div class="icon-svg">
+                  <img src="../../images/projects/aac_comparative-icon.svg" alt="Comparative Icon">
+                </div>
+                <h3>Comparative Experiences</h3>
+              </div>
+              <hr>
+              <p>“Compare other non-profit organization websites with AAC.”</p>
+              <p>“What features would you like to see added that you enjoy from other websites?”</p>
+            </div>
+          </div>
+
+          <div class="regular-text-section">
+            <img src="../../images/projects/aac_interview.png" alt="Interview Results" style="border: none; padding-top: 40px; padding-bottom: 40px;">
+            <p>From 5 user interviews and a survey with 7 responses, affinity mapping highlighted key challenges:
+            <ul>
+              <li>Many users were unfamiliar with the AAC website.</li>
+              <li>There was a consensus on the need for better site organization.</li>
+              <li>Users commonly struggled to locate vital details.</li>
+              <li>The donation process was found to be non-intuitive by some users.</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Define and Ideate</h2>
+            <p>To enhance the AAC website, we crafted a user persona, Sarah Anderson, a 30-year-old animal rights advocate who struggles with the confusing donation page navigation. Through heuristic evaluation, we identified key design improvements: implementing a grid system and style guide, repositioning the donation button, adding a search bar, streamlining spacing and the footer, revamping the donation page with an accordion menu, and optimizing image placements in news articles.</p>
+          </div>
+          <div class="regular-text-section">
+            <div class="image-row-3">
+              <div class="image-item">
+                <img src="../../images/projects/aac_Persona.png" alt="User Persona" data-large-src="../../images/projects/aac_Persona_Large.png" onclick="openLightbox(this)">
+                <p>User Persona</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/aac_HeuristicEvaluation.png" alt="Heuristic Evaluation" data-large-src="../../images/projects/aac_HeuristicEvaluation_Large.png" onclick="openLightbox(this)">
+                <p>Heuristic Evaluation</p>
+              </div>
+              <div class="image-item">
+                <img src="../../images/projects/aac_CompetitiveAnalysis.png" alt="Competitive Analysis" data-large-src="../../images/projects/aac_CompetitiveAnalysis_Large.png" onclick="openLightbox(this)">
+                <p>Competitor Analysis</p>
+              </div>
+            </div>
+          </div>
+          <div class="regular-text-section">
+            <p>Our competitor analysis examined direct and indirect competitors like World Animal Pro, ASPCA, CanadaHelps, and the Humane Society of the United States. Common design patterns included prominently placed donate buttons, early display of mission statements, and preset donation amounts. We also noted the effectiveness of summary pop-up features from other platforms, which we plan to incorporate to enhance user experience on the AAC website.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>User Flow</h2>
+            <p>The userflow is segmented into three primary pillars: News & Articles, Campaigns, and Donation. It ensures seamless transitions between these sections, allowing users to easily access core content from the Homepage, enhancing their overall experience with AAC.</p>
+            <img src="../../images/projects/aac_userflow.png" alt="userflow" style="border: none;">
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Wireframing</h2>
+            <p>Equipped with insights into the main issues and having solidified the user flow, the design phase commenced. My primary emphasis was on achieving aesthetics with a minimalist design, while ensuring flexibility and efficiency of use.</p>
+            <img src="../../images/projects/aac_Wireframe.png" alt="Wireframe">
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Usability Testing</h2>
+            <p>After finalizing wireframes, we conducted usability testing using the online platform Maze to gather diverse user feedback. </p>
+            <img src="../../images/projects/aac_Result.png" alt="TestingResult" style="border: none; padding-top: 30px; padding-bottom: 30px;">
+            <p>Based on the insights, we made necessary optimizations to enhance user experience. Although some users suggested rounded buttons over sharp-edged ones, we retained our original design to maintain our brand identity. With feedback incorporated, we advanced to the next design stages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="finalwhitebk" id="finalproduct">
+        <div class="regulartextarea" style="padding-bottom: 0px;">
+          <div class="regular-text-section">
+            <h2 style="margin-bottom: 36px;">Final Product</h2>
+            <h3>Encouraging Empathy and Action</h3>
+            <p>To quickly capture attention and highlight AAC's mission, we prominently showcased the vibrant 'Donate' button as the primary call to action. This strategic placement fosters seamless interactions and encourages meaningful contributions, aligning the organization's objectives with user support.</p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container">
+            <div class="comparison-column">
+              <div class="comparison-label">Before</div>
+              <img src="../../images/projects/aac_01before.png" alt="Before Image">
+            </div>
+            <div class="comparison-column">
+              <div class="comparison-label">After</div>
+              <img src="../../images/projects/aac_01after.png" alt="After Image">
+            </div>
+          </div>
+        </div>
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h3>Streamlined Insights</h3>
+            <p>To keep the community informed and engaged, we revamped the 'News & Articles' section with a user-centric grid layout for better readability. The new 'Featured Article' category highlights pivotal stories, ensuring visitors access crucial updates on animal advocacy. Our redesign aims to inspire deeper engagement and active contribution to the cause.
+            </p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container">
+            <div class="comparison-column">
+              <div class="comparison-label">News & Articles</div>
+              <img src="../../images/projects/aac_01article.png" alt="News & Articles">
+            </div>
+            <div class="comparison-column">
+              <div class="comparison-label">Specific Article Page</div>
+              <img src="../../images/projects/aac_02article.png" alt="Specific Article Page">
+            </div>
+          </div>
+        </div>
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h3>Purposeful Donation Journey</h3>
+            <p>We restructured the 'Donate' section for a seamless experience, creating a dedicated space for cause selection, allowing users to support initiatives that resonate with them. The introduction of the "Gift of Compassion" option provides clear choices, reducing confusion and enhancing the donation process by distinguishing it from general support donations.
+            </p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container">
+            <div class="comparison-column">
+              <div class="comparison-label">Donate Section</div>
+              <img src="../../images/projects/aac_01donate.png" alt="Before Image">
+            </div>
+            <div class="comparison-column">
+              <div class="comparison-label">Gift of Compassion</div>
+              <img src="../../images/projects/aac_02donate.png" alt="After Image">
+            </div>
+          </div>
+        </div>
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h3>Optimized Donation Process</h3>
+            <p>To ensure a hassle-free donation process, we redesigned the AAC donation form, minimizing required personal information and using a lightbox for payment details. We introduced suggested donation amounts, allowing donors to quickly choose a contribution level, making the donation journey quicker and more intuitive.
+            </p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container" style="gap: 10px;">
+            <div class="comparison-column">
+              <div class="comparison-label">Donation Step 01</div>
+              <img src="../../images/projects/aac_01process.png" alt="Before Image">
+            </div>
+            <div class="comparison-column">
+              <div class="comparison-label">Donation Step 02</div>
+              <img src="../../images/projects/aac_02process.png" alt="After Image">
+            </div>
+            <div class="comparison-column">
+              <div class="comparison-label">Donation Complete</div>
+              <img src="../../images/projects/aac_03process.png" alt="After Image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Style Guide</h2>
+            <p>This guide encapsulates our design philosophy, serving as a compass for visual consistency in the AAC redesign. It brings together meticulously crafted color palettes, typography, and design elements to ensure a cohesive and unified look across the site.
+            </p>
+            <img src="../../images/projects/aac_StyleGuide.png" alt="StyleGuide">
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Final Thoughts on the Project</h2>
+            <p>Looking ahead, I plan to explore strategies to boost awareness and support for the Animal Alliance of Canada (AAC). This includes both online and offline methods to drive traffic to the AAC website. Potential initiatives could involve partnering with animal-friendly brands or organizing community events to highlight AAC’s campaigns.</p>
+            <p>This project has been a revelation, with our team surpassing expectations and achieving significant milestones. Here are key takeaways that will shape my future career and design approach:</p>
+          </div>
+          <div class="three-column-container">
+            <div class="three-column-box">
+              <h3>Synergy Matters</h3>
+              <p>Collaborating with UX designers in animal advocacy was a first for me. It enhanced my ability to give and receive feedback and align with different working styles, refining my collaborative skills for future projects.</p>
+            </div>
+            <div class="three-column-box">
+              <h3>Research: The Bedrock of Design</h3>
+              <p>The AAC project emphasized the importance of research. I deepened my research skills, gaining insights into user needs and exploring new methodologies, which will enrich my future design work.</p>
+            </div>
+            <div class="three-column-box">
+              <h3>User-Centered Design</h3>
+              <p>This project reinforced the value of keeping user needs at the forefront. Understanding user pain points and preferences has equipped me with a stronger foundation for creating designs that truly resonate with users.</p>
+            </div>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
+    </footer>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/lightbox.js"></script>
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+  </body>
+  </html>
