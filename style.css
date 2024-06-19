@@ -341,6 +341,12 @@ a.card {
   outline: 1px solid #4b5563;
   background-color: rgba(237, 237, 237, 0.66);
   filter: grayscale(0%); 
+  
+  /* New rules to specifically target the image */
+  .card-image img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
 }
 
 .card-image img {
