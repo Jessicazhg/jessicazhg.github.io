@@ -646,16 +646,16 @@ footer {
   flex-direction: column; /* Add this line to stack the child elements vertically */
 }
 
-.regulartextarea{
+.regulartextarea, .regulartextareaproto{
   max-width: 1200px;
   padding: 20px;
 }
 
-.regulartextarea h2{
+.regulartextarea h2, .regulartextareaproto h2 {
   font-weight: 700;
 }
 
-.regulartextarea p, .regulartextarea ul, .regulartextarea a{
+.regulartextarea p, .regulartextarea ul, .regulartextarea a, .regulartextareaproto p{
   font-size: 18px;
   line-height: 28px;
 }
@@ -970,6 +970,20 @@ hr {
   margin: 10px 0 0;
 }
 
+.iframe-container {
+  width: 450px; /* Match the width of the iframe */
+  height: 750px; /* Adjust the height to hide the top 50px */
+  overflow: hidden;
+  position: relative;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: -50px;
+  width: 450px; /* Match the width of the iframe */
+  height: 850px;
+}
+
+
 
 @media (max-width: 1240px) {
   
@@ -1172,15 +1186,15 @@ hr {
     font-size: 17px;
   }
 
-  .regulartextarea h2{
+  .regulartextarea h2, .regulartextareaproto h2{
     font-size: 20px;
   }
 
-  .regulartextarea h3{
+  .regulartextarea h3, .regulartextareaproto h3{
     font-size: 18px;
   }
 
-  .regulartextarea p{
+  .regulartextarea p, .regulartextareaproto p{
     font-size: 16px;
   }
 
@@ -1282,6 +1296,18 @@ hr {
     row-gap: 36px;
   }
 
+}
+
+@media (max-width: 470px) {
+  .regulartextareaproto{
+    display: none;
+  }
+  .iframe-container {
+    display: none;
+  }
+  .final{
+    padding: 0px;
+  }
 }
 
 @media (max-width: 460px) {
