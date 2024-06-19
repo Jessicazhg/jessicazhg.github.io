@@ -341,12 +341,6 @@ a.card {
   outline: 1px solid #4b5563;
   background-color: rgba(237, 237, 237, 0.66);
   filter: grayscale(0%); 
-
-  /* New rules to specifically target the image */
-  .card-image img {
-      filter: grayscale(0%);
-      opacity: 1;
-  }
 }
 
 .card-image img {
@@ -782,12 +776,14 @@ footer {
   height: auto;
   border: 1px solid #000;
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  box-shadow: 0 0px 0px rgba(0,0,0,0);
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-item:hover img {
   filter: grayscale(0%);
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.75);
 }
 
 .image-item p {
