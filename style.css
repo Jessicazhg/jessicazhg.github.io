@@ -659,6 +659,28 @@ footer {
   font-weight: 700;
 }
 
+.regulartextarea h2, .regulartextareaproto h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.regulartextarea h2::before, .regulartextareaproto h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 9px;
+  background: rgba(229, 83, 0, 0.3);
+  z-index: -1;
+}
+
+.regulartextarea, .regulartextareaproto {
+  position: relative;
+  z-index: 0;
+}
+
 .regulartextarea p, .regulartextarea ul, .regulartextarea a, .regulartextareaproto p{
   font-size: 18px;
   line-height: 28px;
