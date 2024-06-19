@@ -421,7 +421,7 @@ footer {
   flex-direction: column;
   display: flex;
   padding-top: 80px;
-  padding-bottom: 96px;
+  padding-bottom: 80px;
   align-items: flex-start;
 }
 
@@ -867,13 +867,18 @@ footer {
   padding: 0px 20px;
 }
 
-.comparison-column {
+.comparison-column, .comparison-column-onclick {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: relative;
+}
+
+.comparison-column-onclick{
+  box-shadow: 0 0px 0px rgba(0,0,0,0);
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .comparison-label {
@@ -889,10 +894,14 @@ footer {
   z-index: 1;
 }
 
-.comparison-column img {
+.comparison-column img, .comparison-column-onclick {
   max-width: 100%;
   height: auto;
-  border: 1px solid #ddd;
+}
+
+.comparison-column-onclick:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.75);
 }
 
 .three-column-container {
