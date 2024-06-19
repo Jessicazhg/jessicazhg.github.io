@@ -877,6 +877,10 @@ footer {
 }
 
 .comparison-column-onclick{
+  border: 1px #d3d3d3 solid;
+}
+
+.comparison-column-onclick{
   box-shadow: 0 0px 0px rgba(0,0,0,0);
   transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
