@@ -17,6 +17,10 @@ html {
   }
 }
 
+header {
+  height: 96px;
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   margin: 0;
@@ -1232,6 +1236,10 @@ hr {
 }
 
 @media (max-width: 560px) {
+  header{
+    height: 72px;
+  }
+  
   .three-column-container {
     flex-direction: column;
     gap: 0px;
