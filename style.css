@@ -865,8 +865,8 @@ footer {
 
 .comparison-container {
   display: flex;
-  gap: 30px;
-  max-width: 1200px;
+  gap: 24px;
+  max-width: 1240px;
   width: 100%;
   padding: 0px 20px;
 }
