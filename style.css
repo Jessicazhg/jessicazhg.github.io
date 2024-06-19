@@ -1229,7 +1229,7 @@ hr {
     width: 100%;
     background: #fff;
     position: absolute;
-    top: 73px;
+    top: 56px;
     left: 0;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -1253,7 +1253,11 @@ hr {
   }
 
   .navbarcontainer{
-    height: 88px;
+    height: 72px;
+  }
+
+  .logo{
+    font-size: 28px;
   }
 
   .headnavcurrent{
