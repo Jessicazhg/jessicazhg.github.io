@@ -506,82 +506,88 @@ footer {
 
 .project-details {
   width: 100%;
-  padding: 60px;
-  background-color: #722bd3; /* Adjust the color to match the purple shade in the image */
-  color: white;
-  display: flex; /* Use flexbox to create columns */
+  padding: 60px 40px;
+  background: #000;
+  color: #fff;
+  display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items at the top */
+  align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .project-details-container {
   display: flex;
   max-width: 1200px;
   width: 100%;
-  margin: 0 30px; /* Center the container */
+  margin: 0 auto;
 }
 
-.project-details-left,
-.project-details-right {
-  padding: 0 20px; /* Add some padding for better spacing */
+.project-details-left, .project-details-right {
+  box-sizing: border-box;
 }
 
 .project-details-left {
-  flex: 1.25; /* Left column takes 1 part of the space */
+  width: 40%;
   display: flex;
-  justify-content: center; /* Center the content horizontally and vertically */
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 .project-details-right {
-  flex: 2.75; /* Right column takes 2.75 parts of the space */
+  width: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 32px;
 }
 
-.project-details-right p{
-  margin-bottom: 20px;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.project-details-info {
+.project-meta-row {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 20px; /* Add space between items */
+  align-items: center;
+  padding: 18px 0 12px 0;
+  border-bottom: 1px solid #444;
+  font-size: 1rem;
 }
 
-.project-details-info div {
-  flex: 1;
-  min-width: 120px; /* Ensure items don't get too small */
+.project-meta-title {
+  font-style: italic;
+  font-family: 'Vollkorn', serif;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.85;
+  min-width: 80px;
 }
 
-.project-details-info h2 {
-  margin-bottom: 0px;
+.project-meta-content {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  color: #fff;
+  font-style: normal;
+  text-align: right;
 }
 
-.project-details-info p{
-  margin-top: 8px;
+.project-title {
+  font-size: 1.3rem;
+  font-family: 'Vollkorn', serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #fff;
 }
 
-.project-details h2 {
-  font-size: 22px;
-  font-weight: 700;
+.project-details-right p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  color: #fff;
 }
 
 .project-details a {
-  color: white; /* Set link color to white */
-  text-decoration: none; /* Remove underline */
-  -webkit-text-stroke-width: 0; /* Initial text stroke width */
-  -webkit-text-stroke-color: transparent; /* Initial text stroke color */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Hover effects for the link */
-.project-details a:hover {
-  text-decoration: underline; /* Add underline on hover */
-  -webkit-text-stroke-width: 1px; /* Add 1px text stroke on hover */
-  -webkit-text-stroke-color: white; /* Set text stroke color to white on hover */
+  color: #fff;
+  text-decoration: underline;
 }
 
 .workinprogress {
@@ -672,7 +678,7 @@ footer {
   bottom: 2px;
   width: 100%;
   height: 9px;
-  background: rgba(229, 83, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
 
@@ -1107,8 +1113,8 @@ hr {
   .herocolumnB{
     height: 270px;
   }
-  .project-details{
-    padding: 36px 40px;
+  .project-details {
+    padding: 36px 10px;
   }
 
   .image-grid, .image-grid2 {
@@ -1119,19 +1125,22 @@ hr {
     gap: 16px;
   }
   .project-details-container {
-    flex-direction: column; /* Stack columns vertically */
-    align-items: center; /* Center items horizontally */
-    margin: 0 0px;
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .project-details-left, .project-details-right {
-    flex: none; /* Reset flex properties */
-    width: 100%; /* Make both columns full width */
-    padding: 0px 0; /* Adjust padding for better spacing */
+  .project-details-right {
+    order: 1;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 0;
   }
 
   .project-details-left {
-    justify-content: flex-start;
+    order: 2;
+    width: 100%;
+    padding: 0;
+    gap: 8px;
   }
 
   .project-details-info{
@@ -1398,4 +1407,130 @@ hr {
   .herocolumnB{
     height: 205px;
   }
+}
+
+/* Project Grid Styles */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.category {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    font-size: 0.9rem;
+}
+
+.view-project {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.view-project:hover {
+    background: #555;
+}
+
+/* Project Detail Page Styles */
+.project-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.project-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-content {
+    margin-bottom: 3rem;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.project-meta {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.project-gallery {
+    margin: 2rem 0;
+}
+
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.prev-project,
+.next-project {
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.prev-project:hover,
+.next-project:hover {
+    background: #333;
+    color: #fff;
 }

@@ -41,15 +41,31 @@ nav a:hover {
 }
 
 .project-details{
-  background-color: #008FD8;
+  background-color: #000;
 }
 
 .google-slide-link {
-  background-color: #008FD8;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .google-slide-link:hover {
-  color: #008FD8;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.workinprogress {
+  background-color: #008FD8;
+}
+
+.wipcontainer {
+  color: #fff;
+}
+
+.wipcontainer h2 {
+  color: #fff;
 }
 
 </style>
@@ -77,35 +93,30 @@ nav a:hover {
       </section>
       <section class="project-details" style="max-width: none;">
         <div class="project-details-container">
-            <div class="project-details-left">
-              <h2>HarmonyHub</h2>
+          <div class="project-details-left">
+            <div class="project-meta-row">
+              <span class="project-meta-title">Team</span>
+              <span class="project-meta-content">Individual</span>
             </div>
-            <div class="project-details-right">
-              <p>HarmonyHub revolutionizes the live music scene, connecting venue owners, artists, and concert-goers. Artists showcase their work to attrack bookings, while owners manage events seamlessly. Attendees explore and buy tickets for shows, creating an enriched, harmonious ecosystem for the live music industry.</p>
-              <p>This is a project for <a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank">Coursera Google UX Design Professional Certificate</a>.</p>
-              <div class="project-details-info">
-                <div>
-                  <h2>Team</h2>
-                  <p>Individual</p>
-                </div>
-                
-                <div>
-                  <h2>Duration</h2>
-                  <p>4 Weeks</p>
-                </div>
-                
-                <div>
-                  <h2>Role</h2>
-                  <p>UX Researcher, App Designer</p>
-                </div>
-                
-                <div>
-                  <h2>Time</h2>
-                  <p>Mar 30 2023 ~ Apr 30 2023</p>
-                </div>
-              </div>
+            <div class="project-meta-row">
+              <span class="project-meta-title">Duration</span>
+              <span class="project-meta-content">4 Weeks</span>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-meta-title">Role</span>
+              <span class="project-meta-content">UX Researcher, App Designer</span>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-meta-title">Year</span>
+              <span class="project-meta-content">2022</span>
             </div>
           </div>
+          <div class="project-details-right">
+            <h2 class="project-title">HarmonyHub</h2>
+            <p>HarmonyHub revolutionizes the live music scene, connecting venue owners, artists, and concert-goers. Artists showcase their work to attrack bookings, while owners manage events seamlessly. Attendees explore and buy tickets for shows, creating an enriched, harmonious ecosystem for the live music industry.</p>
+            <p>This is a project for <a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank">Coursera Google UX Design Professional Certificate</a>.</p>
+          </div>
+        </div>
       </section>
       <section class="workinprogress" style="max-width: none;">
         <div class="wipcontainer">
@@ -117,7 +128,7 @@ nav a:hover {
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Jessica Zhang. All Rights Reserved.</p>
+      <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
     </footer>
     <script src="../../js/navigation.js"></script>
   </body>
