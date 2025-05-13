@@ -545,11 +545,11 @@ footer {
 
 .project-meta-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0 12px 0;
-  border-bottom: 1px solid #a9a9a9;
-  font-size: 1rem;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 18px 0 12px 0 !important;
+  border-bottom: 1px solid #a9a9a9 !important;
+  font-size: 1rem !important;
 }
 
 .project-meta-title {
