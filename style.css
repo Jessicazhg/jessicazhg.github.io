@@ -358,7 +358,7 @@ a.card {
   height: auto;
   display: block;
   filter: grayscale(100%);
-  opacity: .66;
+  opacity: .75;
   transition: all 0.3s;
 }
 
@@ -1019,7 +1019,33 @@ hr {
   height: 850px;
 }
 
+.card-full-width {
+  width: 100%;
+}
 
+.card-full-width .card {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card-full-width .card-image {
+  width: 100%;
+}
+
+.card-full-width .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card-full-width .tags {
+  margin: 0;
+}
 
 @media (max-width: 1240px) {
   

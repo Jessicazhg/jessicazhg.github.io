@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Alliance of Canada Website Redesign | Jessica Zhang's Portfolio</title>
+  <link href="../../style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="../../images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-moz-selection { /* for firefox */
+  color: #ffffff;
+  background: rgb(50 50 50);
+}
+::selection { /* for other browser*/
+  color: #ffffff; 
+  background: rgb(50 50 50);
+}
+
+body {
+  background-image: url('/images/projects/bk_green.png');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+nav a:hover {
+  color: #1ca06d;
+  outline: 3px #1ca06d;
+}
+
+.navbarcontainer {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  background-color: #ededed; /* Optional: Add a background color to avoid transparency issues */
+  box-shadow: 0 8px 24px rgba(255, 121, 49, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+.project-details{
+  background-color: #000;
+}
+
+.nibutton-link {
+  background-color: #FF7931;
+}
+
+.regulartextarea a {
+    color: #1ca06d;
+}
+
+.regulartextarea a:hover {
+  -webkit-text-stroke-color: #1ca06d; /* Set text stroke color to white on hover */
+}
+
+.three-column-box{
+  background-color: #1ca06d;
+}
+
+</style>
+
+<body class="voyager-vertex-page">
+    <header class="navbarcontainer">
+        <div class="navbarcontainercontainer">
+            <div class="logo">JZ.</div>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+              <ul>
+                <li><a href="/">My Work</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="https://drive.google.com/file/d/1d8838TWhvDpoSpdN_twFBc2fIOZjrX02/view?usp=sharing" target="_blank">Download Resume</a></li>
+              </ul>
+            </nav>
+        </div>
+    </header>
+  
+    <main>
+      <section class="project-hero">
+        <div class="project-hero-content">
+          <img src="../../images/projects/aac-hero.png" alt="AAC Hero Image">
+        </div>
+      </section>
+      <section class="project-details" style="max-width: none;">
+        <div class="project-details-container">
+          <div class="project-details-left">
+            <div class="project-meta-row">
+              <span class="project-meta-title">Team</span>
+              <span class="project-meta-content">2 Designers</span>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-meta-title">Duration</span>
+              <span class="project-meta-content">1 Week</span>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-meta-title">Role</span>
+              <span class="project-meta-content">Web Designer</span>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-meta-title">Year</span>
+              <span class="project-meta-content">2025</span>
+            </div>
+          </div>
+          <div class="project-details-right">
+            <h2 class="project-title">Nexad AI Dashboard</h2>
+            <p>Nexad is the world’s first AI-native advertising platform. While my teammate focused on the onboarding experience, I designed the publisher-facing dashboard — built to help AI app developers and publishers track revenue, manage ad settings, and monitor performance in real time. The interface aims to prioritize clarity and usability.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="regularwhitebk" style="padding-bottom: 0px;">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>Background</h2>
+            <p>Nexad is the world’s first AI-native advertising platform, embedding personalized, context-aware ads into AI-driven environments like chatbots and virtual assistants. As the platform rapidly scaled, Nexad needed a publisher-facing dashboard to help AI app partners manage their ad settings, monitor revenue, and optimize monetization—all while maintaining a seamless user experience.
+            </p>
+          </div>
+                <div class="regular-text-section">
+        <h2>The Problem</h2>
+        <p>Despite Nexad’s powerful backend, its early internal tool for publishers lacked a clear interface and scalable design system. The main issues identified were:
+            <ul>
+              <li>Disorganized revenue and performance data, making it difficult for publishers to interpret trends or take action.</li>
+              <li>Fragmented settings and controls without intuitive hierarchy.</li>
+              <li>No centralized platform for managing ad placements or tracking payout history.</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="line-divider-sec">
+      <div class="line-divider"></div>
+      </section>
+
+      <section class="regularwhitebk">
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h2>User Flow</h2>
+            <p>Before starting the design, my teammate and I mapped out the full user flow to clarify key interactions and define the necessary screens. This helped us align our work—she focused on onboarding while I handled the dashboard—and ensured a smooth, logical experience for both new and returning users.
+            </p>
+            <p>The flow starts with two entry points: a CTA or a navigation link for advertisers. Returning users can sign in and go directly to the dashboard. New users are guided through a three-step sign-up process: account setup, company info, and email verification (including a code input).</p>
+            <p>Once onboarded, users land on the publisher dashboard, where they can create campaigns, manage ad settings, and track revenue. Campaign creation includes clear save/cancel options and returns users to the dashboard—supporting efficient, intuitive navigation across tasks.</p>
+            <img src="../../images/projects/aac_userflow.png" alt="userflow" style="border: none;">
+          </div>
+        </div>
+      </section>
+
+      <section class="line-divider-sec">
+        <div class="line-divider"></div>
+      </section>
+
+      <section class="finalwhitebk" id="finalproduct">
+        <div class="regulartextarea" style="padding-bottom: 0px;">
+          <div class="regular-text-section">
+            <h2 >Final Product</h2>
+            <p style="margin-bottom: 36px;">Due to a tight timeline, we skipped wireframing and moved straight into high-fidelity prototyping, working closely with the product manager to align on priorities. The final design delivers a clean, intuitive dashboard for publishers to track revenue, manage ad settings, and monitor performance—optimized for clarity, speed, and scalability.</p>
+            <h3>Real-Time Dashboard & Campaign Management</h3>
+            <p>The dashboard provides a quick snapshot of key metrics—budget, impressions, CTR, and spend—paired with a clean table for managing campaigns. Publishers can pause, review, and edit campaigns directly. A modal allows quick updates to tracking links without leaving the page, streamlining the workflow for fast, in-context adjustments.</p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container" style="gap: 10px;">
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Dashboard page 1</div>
+              <img src="../../images/projects/nexad_DASHBOARD.png" alt="Dashboard" data-large-src="../../images/projects/nexad_DASHBOARD.png" onclick="openLightbox(this)">
+            </div>
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Dashboard page 2</div>
+              <img src="../../images/projects/nexad_DAHSBOARD02.png" alt="Dashboard" data-large-src="../../images/projects/nexad_DAHSBOARD02.png" onclick="openLightbox(this)">
+            </div>
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Edit Campaign</div>
+              <img src="../../images/projects/nexad_EditCampingne.png" alt="Campaigns" data-large-src="../../images/projects/nexad_EditCampingne.png" onclick="openLightbox(this)">
+            </div>
+          </div>
+        </div>
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h3>Visual Reporting for Smarter Decisions</h3>
+            <p>The “Reports” section uses charts to help publishers track trends across budget, spend, CTR, and effective cost-per-click (eCPC). By visualizing performance over time and across campaigns, we empower users to make informed adjustments and optimize results without diving into raw data.
+            </p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container">
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Campaign Performance</div>
+              <img src="../../images/projects/nexad_report01.png" alt="REPORT1" data-large-src="../../images/projects/nexad_report01.png" onclick="openLightbox(this)">
+            </div>
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Geographic Analysis</div>
+              <img src="../../images/projects/nexad_report02.png" alt="REPORT2" data-large-src="../../images/projects/nexad_report02.png" onclick="openLightbox(this)">
+            </div>
+          </div>
+        </div>
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h3>Payment Error Handling</h3>
+            <p>To support better user experience during transaction issues, we designed a focused warning lightbox for failed payments. Clear messaging, a retry button, and invoice-specific references help users understand the issue and take immediate action without confusion or redirection.
+            </p>
+          </div>
+        </div>
+        <div class="final">
+          <div class="comparison-container">
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Payment Failed</div>
+              <img src="../../images/projects/nexad_warning.png" alt="Before Image" data-large-src="../../images/projects/nexad_warning.png" onclick="openLightbox(this)">
+            </div>
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Payment Processing</div>
+              <img src="../../images/projects/nexad_processing.png" alt="After Image" data-large-src="../../images/projects/nexad_processing.png" onclick="openLightbox(this)">
+            </div>
+          </div>
+        </div>
+        <div class="regulartextarea">
+          <div class="regular-text-section">
+            <h3>Clean Settings, Clear Control</h3>
+            <p>Under “Setting,” users can manage account information and company details with a simple, form-based layout. We emphasized user clarity with segmented sections for password updates, company profile, and business objectives. Edge cases like account modification are handled with contextual instructions and direct contact support, keeping the experience clear and focused.
+            </p>
+          </div>
+        </div>
+        <div class="final" id="specialElement">
+          <div class="comparison-container">
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Settings</div>
+              <img src="../../images/projects/nexad_setting.png" alt="Before Image" data-large-src="../../images/projects/nexad_setting.png" onclick="openLightbox(this)">
+            </div>
+            <div class="comparison-column-onclick">
+              <div class="comparison-label">Contact Us</div>
+              <img src="../../images/projects/nexad_contactus.png" alt="After Image" data-large-src="../../images/projects/nexad_contactus.png" onclick="openLightbox(this)">
+            </div>
+          </div>
+        </div>
+
+    </main>
+    <footer>
+      <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
+    </footer>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/lightbox.js"></script>
+    <script src="../../js/paddingbottom.js"></script>
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+  </body>
+  </html>
