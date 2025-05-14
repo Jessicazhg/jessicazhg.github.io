@@ -527,11 +527,12 @@ footer {
 }
 
 .project-details-left {
-  width: 40%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 8px;
+  padding-bottom: 30px;
 }
 
 .project-details-right {
@@ -540,7 +541,8 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 32px;
+  padding-left: 48px;
+  padding-bottom: 30px;
 }
 
 .project-meta-row {
@@ -617,7 +619,7 @@ footer {
 
 .wipcontainer p{
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 /* Style for the Google Slide link */
@@ -949,10 +951,10 @@ footer {
 
 .three-column-box {
   flex: 1;
-  background-color: #e55300; /* Adjust color as needed */
+  background-color: #000; /* Adjust color as needed */
   color: #fff;
   padding: 20px;
-  border-radius: 8px;
+  /* border-radius: 8px;*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -1150,24 +1152,7 @@ hr {
     margin-right: auto; /* Center the grid */
     gap: 16px;
   }
-  .project-details-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
 
-  .project-details-right {
-    order: 1;
-    width: 100%;
-    padding-left: 0;
-    margin-top: 0;
-  }
-
-  .project-details-left {
-    order: 2;
-    width: 100%;
-    padding: 0;
-    gap: 8px;
-  }
 
   .project-details-info{
     gap: 16px;
@@ -1220,6 +1205,25 @@ hr {
 
   .research-cards {
     flex-direction: column;
+  }
+
+    .project-details-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-details-right {
+    order: 1;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .project-details-left {
+    order: 2;
+    width: 100%;
+    padding: 0px 0px 32px 0px;
+    gap: 8px;
   }
 
 }
