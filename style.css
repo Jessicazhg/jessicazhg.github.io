@@ -1143,7 +1143,7 @@ hr {
     height: 270px;
   }
   .project-details {
-    padding: 36px 10px;
+    padding: 36px 20px;
   }
 
   .image-grid, .image-grid2 {
@@ -1268,10 +1268,6 @@ hr {
     font-size: 16px;
   }
 
-
-  .project-details-container h2{
-    font-size: 18px;
-  }
 
   .wipcontainer h2, .nicontainer h2{
     font-size: 30px;
