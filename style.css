@@ -207,7 +207,6 @@ h2 {
 
 .hero2column {
   grid-column-gap: 24px;
-  grid-row-gap: 24px;
   flex: 0 auto;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1366,11 +1365,16 @@ hr {
   .hamburger {
     display: none;
   }
+
 }
 
 @media (max-width: 560px) {
   header{
     height: 72px;
+  }
+
+  .hero2column{
+    grid-row-gap: 12px;
   }
 
   .three-column-container {
@@ -1479,6 +1483,10 @@ hr {
 
   .aboutme {
     grid-row-gap: 28px;
+  }
+
+  .hero2column{
+    grid-row-gap: 0;
   }
 
   .heroimage h1 {
