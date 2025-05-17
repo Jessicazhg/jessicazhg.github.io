@@ -469,10 +469,10 @@ footer {
 }
 
 .aboutme h2{
-  font-size: 22px;
+  font-size: 1.2em;
   font-weight: 400;
   margin-top: 0px;
-  line-height: 32px;
+  line-height: 1.5em;
 }
 
 .aboutmecolumnB{
@@ -665,7 +665,9 @@ footer {
 }
 
 .regulartextarea h2, .regulartextareaproto h2 {
-  font-weight: 700;
+  font-weight: 500;
+  font-family: Vollkorn, serif;
+  font-size: 1.75em;
 }
 
 .regulartextarea h2, .regulartextareaproto h2 {
@@ -678,11 +680,11 @@ footer {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 2px;
+  bottom: 1px;
   width: 100%;
-  height: 9px;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: -1;
+  height: 1px;
+  background: #000;
+  z-index: 1;
 }
 
 .regulartextarea, .regulartextareaproto {
@@ -1257,7 +1259,11 @@ hr {
   }
 
   .regulartextarea h2, .regulartextareaproto h2{
-    font-size: 20px;
+    font-size: 1.5em;
+  }
+
+  .regulartextarea p, .regulartextarea ul, .regulartextarea a, .regulartextareaproto p {
+    font-size: 16px;
   }
 
   .regulartextarea h3, .regulartextareaproto h3{
