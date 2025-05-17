@@ -1373,7 +1373,7 @@ hr {
   nav ul {
     display: none;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
     width: 100%;
     background: #000;
     position: absolute;
@@ -1383,10 +1383,21 @@ hr {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transform: translateY(-73px);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    justify-content: flex-start;
+    width: auto;
   }
 
   nav a{
     color: #fff;
+    text-align: left;
+    width: auto;
+    padding: 10px 0;
+    height: auto;
+    line-height: 1.2;
   }
 
   nav ul.active {
@@ -1413,8 +1424,12 @@ hr {
   }
 
   .headnavcurrent{
-    padding: 2px 10px;
+    padding: 10px 0;
     color: #fff;
+    text-align: left;
+    width: auto;
+    height: auto;
+    line-height: 1.2;
   }
 
   .portfolio-categories-centered {
@@ -1670,4 +1685,44 @@ hr {
 .next-project:hover {
     background: #333;
     color: #fff;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 0 !important;
+  border: none !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+/* Firefox scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000 transparent;
 }
