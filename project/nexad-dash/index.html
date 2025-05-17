@@ -46,8 +46,14 @@ nav a:hover {
   position: sticky;
   top: 0;
   z-index: 1000; /* Ensures the navbar is on top of other elements */
-  background-color: #ededed; /* Optional: Add a background color to avoid transparency issues */
-  box-shadow: 0 8px 24px rgba(255, 121, 49, 0.2); /* Optional: Add a shadow for better visibility */
+  border-bottom: 1px solid #4b5563;
+  transition: all 0.3s ease;
+}
+
+.navbarcontainer.scrolled {
+  background-color: rgba(238, 238, 238, 0.60);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .project-details{
@@ -70,6 +76,58 @@ nav a:hover {
   background-color: #FF7931;
 }
 
+/* Sidebar Navigation Styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  padding: 8px;
+  width: 200px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-nav li {
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-nav a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
+  text-align: left;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.sidebar-nav a:hover {
+  color: #000;
+}
+
+.sidebar-nav a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+@media (max-width: 1270px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 </style>
 
 <body class="voyager-vertex-page">
@@ -88,7 +146,15 @@ nav a:hover {
     </header>
   
     <main>
-      <section class="project-hero">
+      <nav class="sidebar">
+        <ul class="sidebar-nav">
+          <li><a href="#overview" class="active">Overview</a></li>
+          <li><a href="#background">Background</a></li>
+          <li><a href="#finalproduct">Final Product</a></li>
+        </ul>
+      </nav>
+
+      <section class="project-hero" id="overview">
         <div class="project-hero-content">
           <img src="../../images/projects/nexad-hero.png" alt="Nexad Hero Image">
         </div>
@@ -120,7 +186,7 @@ nav a:hover {
         </div>
       </section>
 
-      <section class="regularwhitebk" style="padding-bottom: 0px;">
+      <section class="regularwhitebk" id="background" style="padding-bottom: 0px;">
         <div class="regulartextarea">
           <div class="regular-text-section">
             <h2>Background</h2>
@@ -165,7 +231,7 @@ nav a:hover {
       <section class="finalwhitebk" id="finalproduct">
         <div class="regulartextarea" style="padding-bottom: 0px;">
           <div class="regular-text-section">
-            <h2 >Final Product</h2>
+            <h2 style="margin-bottom: 16px;">Final Product</h2>
             <p style="margin-bottom: 36px;">Due to a tight timeline, we skipped wireframing and moved straight into high-fidelity prototyping, working closely with the product manager to align on priorities. The final design delivers a clean, intuitive dashboard for publishers to track revenue, manage ad settings, and monitor performance—optimized for clarity, speed, and scalability.</p>
             <h3>Real-Time Dashboard & Campaign Management</h3>
             <p>The dashboard provides a quick snapshot of key metrics—budget, impressions, CTR, and spend—paired with a clean table for managing campaigns. Publishers can pause, review, and edit campaigns directly. A modal allows quick updates to tracking links without leaving the page, streamlining the workflow for fast, in-context adjustments.</p>
@@ -256,5 +322,46 @@ nav a:hover {
       <span class="close">&times;</span>
       <img class="lightbox-content" id="lightbox-img">
     </div>
+    <script>
+      // Scroll Spy functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+        function updateActiveLink() {
+          let currentSection = '';
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 200)) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSection) {
+              link.classList.add('active');
+            }
+          });
+        }
+
+        // Smooth scroll for navigation links
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+
+        // Update active link on scroll
+        window.addEventListener('scroll', updateActiveLink);
+        // Initial call to set active link
+        updateActiveLink();
+      });
+    </script>
   </body>
   </html>

@@ -36,8 +36,14 @@ nav a:hover {
   position: sticky;
   top: 0;
   z-index: 1000; /* Ensures the navbar is on top of other elements */
-  background-color: #ededed; /* Optional: Add a background color to avoid transparency issues */
-  box-shadow: 0 8px 24px rgba(114,43,211, 0.2); /* Optional: Add a shadow for better visibility */
+  border-bottom: 1px solid #4b5563;
+  transition: all 0.3s ease;
+}
+
+.navbarcontainer.scrolled {
+  background-color: rgba(238, 238, 238, 0.60);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .project-details{
