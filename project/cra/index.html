@@ -75,6 +75,14 @@ nav a:hover {
   z-index: 100;
   padding: 8px;
   width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar-nav {
@@ -479,6 +487,17 @@ nav a:hover {
       document.addEventListener('DOMContentLoaded', function() {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.sidebar-nav a');
+        const sidebar = document.querySelector('.sidebar');
+        const projectDetails = document.querySelector('.project-details');
+
+        function updateSidebarVisibility() {
+          const projectDetailsBottom = projectDetails.offsetTop + projectDetails.offsetHeight;
+          if (window.scrollY > projectDetailsBottom) {
+            sidebar.classList.add('visible');
+          } else {
+            sidebar.classList.remove('visible');
+          }
+        }
 
         function updateActiveLink() {
           let currentSection = '';
@@ -509,10 +528,15 @@ nav a:hover {
           });
         });
 
-        // Update active link on scroll
-        window.addEventListener('scroll', updateActiveLink);
-        // Initial call to set active link
+        // Update active link and sidebar visibility on scroll
+        window.addEventListener('scroll', () => {
+          updateActiveLink();
+          updateSidebarVisibility();
+        });
+        
+        // Initial calls
         updateActiveLink();
+        updateSidebarVisibility();
       });
     </script>
   </body>
