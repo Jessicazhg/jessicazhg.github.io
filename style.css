@@ -203,6 +203,23 @@ h2 {
   display: flex;
 }
 
+.aboutmecolumnB {
+  width: 100%;
+  max-width: 516px;
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 16px 24px 24px;
+  display: flex;
+}
+
+.aboutmecolumnB img {
+  width: 450px;
+  height: auto;
+}
+
 a.card {
   text-decoration: none;
   color: inherit;
@@ -473,17 +490,6 @@ footer {
   font-weight: 400;
   margin-top: 0px;
   line-height: 1.5em;
-}
-
-.aboutmecolumnB{
-  width: 100%;
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0;
-  display: flex;
 }
 
 .project-hero {
