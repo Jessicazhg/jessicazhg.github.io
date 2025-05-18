@@ -421,9 +421,9 @@ a.card {
 }
 
 .card:hover {
-  border: 0 solid #000;
+  border: 0 solid #0050d4;
   outline: 1px solid #000;
-  background-color: #ededed;
+  background-color: rgba(237, 237, 237, 1);
 }
 
 .card:hover h2{
@@ -435,35 +435,22 @@ a.card {
 }
 
 .card:hover .tags span{
-  color: #000;
+  color: #fff;
   border: 1px solid #000;
-}
-
-.card-image {
-  position: relative;
-  width: 100%;
+  background: #000;
 }
 
 .card-image img {
   width: 100%;
   height: auto;
   display: block;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  filter: grayscale(100%);
+  opacity: .75;
+  transition: all 0.3s;
 }
 
-.card-image img.hover-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.card:hover .card-image img.default-image {
-  opacity: 0;
-}
-
-.card:hover .card-image img.hover-image {
+.card:hover .card-image img {
+  filter: grayscale(0%);
   opacity: 1;
 }
 
@@ -490,6 +477,13 @@ a.card {
   padding: 4px 18px;
   font-size: 12px;
   color: #0050d4;
+  transition: all 0.3s ease;
+}
+
+.card:hover .tags span{
+  color: #fff;
+  border: 1px solid #000;
+  background: #000;
 }
 
 footer {
@@ -511,7 +505,7 @@ footer {
 .image-grid img, .image-grid2 img {
   width: 100%;
   height: auto;
-  border: 1px solid black; /* 1px black border */
+  border: 1px solid #0050d4; /* 1px black border */
   box-sizing: border-box;
 }
 
@@ -1118,7 +1112,7 @@ hr {
   width: 100%;
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition: all 0.3s;
 }
 
 .card-full-width.visible {
@@ -1134,7 +1128,7 @@ hr {
   flex-direction: column;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out, filter 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s;
 }
 
 .card-full-width .card.visible {
@@ -1811,7 +1805,7 @@ hr {
 .card {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out, filter 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s;
 }
 
 .card.visible {
