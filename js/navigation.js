@@ -89,3 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
   updateActiveLink();
   updateSidebarVisibility();
 });
+
+// Update Toronto time
+function updateTorontoTime() {
+  const torontoTime = document.getElementById('toronto-time');
+  if (torontoTime) {
+    const options = {
+      timeZone: 'America/Toronto',
+      hour12: true,
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    };
+    const time = new Date().toLocaleTimeString('en-US', options);
+    torontoTime.textContent = time;
+  }
+}
+
+// Update time every second
+setInterval(updateTorontoTime, 1000);
+updateTorontoTime(); // Initial call

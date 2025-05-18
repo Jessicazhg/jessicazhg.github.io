@@ -11,6 +11,52 @@
     section h1 {
       text-align: left;
     }
+    
+    .line-divider-sec {
+      width: 100%;
+      height: 1px;
+      background-color: #0050d4;
+      margin: 40px 0;
+    }
+
+    .aboutme_3column {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .contact-column, .location-column, .socials-column {
+      width: 100%;
+      text-align: left;
+    }
+
+    .aboutme_3column h2 {
+      font-weight: 600 !important;
+      font-style: normal;
+      line-height: 1.2em;
+      font-size: 24px !important;
+      text-transform: uppercase;
+      color: #333;
+      margin-bottom: 1.25rem;
+    }
+
+    .aboutme_3column p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0px 0px 6px 0px;
+    }
+
+    .aboutme_3column a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .aboutme_3column a:hover {
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -51,6 +97,23 @@
               <div class="aboutmecolumnB">
                 <img src="../images/Avatar.svg" alt="Avatar">
               </div>
+          </div>
+          <div class="line-divider-sec"></div>
+          <div class="aboutme_3column">
+            <div class="contact-column">
+              <h2>Contact Details</h2>
+              <p>jessjwzhang@gmail.com</p>
+            </div>
+            <div class="location-column">
+              <h2>Location</h2>
+              <p>Toronto, ON Canada</p>
+              <p id="toronto-time"></p>
+            </div>
+            <div class="socials-column">
+              <h2>Socials</h2>
+              <p><a href="https://github.com/36346" target="_blank">Github</a></p>
+              <p><a href="https://www.behance.net/y3636" target="_blank">Behance</a></p>
+            </div>
           </div>
       </section>
     </main>
