@@ -333,7 +333,7 @@ a.card {
 
 .portfolio-categories-centered .not-current:hover {
   color: white;
-  background-color: black;
+  background-color: #0050d4;
 }
 
 .portfolio-items {
@@ -393,7 +393,7 @@ a.card {
   width: 100%;
   background-color: rgba(237, 237, 237, 0.33);
   border: 0 solid #0050d4;
-  outline: 1px solid transparent;
+  outline: 1px solid rgba(0,80,212,0.33);
   padding: 16px;
   overflow: hidden;
   transition: opacity 0.3s ease-out, transform 0.3s ease-out, background-color 0.3s ease;
@@ -421,9 +421,22 @@ a.card {
 }
 
 .card:hover {
-  border: 0 solid #0050d4;
-  outline: 1px solid #0050d4;
+  border: 0 solid #000;
+  outline: 1px solid #000;
   background-color: #ededed;
+}
+
+.card:hover h2{
+  color: #000;
+}
+
+.card:hover p{
+  color: #000;
+}
+
+.card:hover .tags span{
+  color: #000;
+  border: 1px solid #000;
 }
 
 .card-image {
