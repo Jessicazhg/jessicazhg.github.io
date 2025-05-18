@@ -52,10 +52,10 @@
 
   .scroll-indicator {
     position: absolute;
-    bottom: -48px;
+    bottom: -64px;
     right: 0;
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border: 2px solid #0050d4;
     border-radius: 50%;
     display: flex;
@@ -76,8 +76,8 @@
 
   .scroll-indicator::after {
     content: '';
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-right: 2px solid #0050d4;
     border-bottom: 2px solid #0050d4;
     transform: rotate(45deg);
@@ -106,12 +106,12 @@
 
   @media screen and (max-width: 950px) {
     .scroll-indicator {
-      width: 40px;
-      height: 40px;
+      width: 56px;
+      height: 56px;
     }
     .scroll-indicator::after {
-      width: 12px;
-      height: 12px;
+      width: 16px;
+      height: 16px;
     }
   }
 

@@ -281,7 +281,7 @@ a.card {
 
 .portfolio-categories {
   width: 100%;
-  height: 140px;
+  height: 160px;
   grid-column-gap: 340px;
   grid-row-gap: 340px;
   justify-content: center;
@@ -391,6 +391,7 @@ a.card {
 .card {
   width: 100%;
   background-color: rgba(237, 237, 237, 0.33);
+  backdrop-filter: blur(10px);
   border: 0 solid #0050d4;
   outline: 1px solid rgba(0,80,212,0.33);
   padding: 16px;
@@ -473,7 +474,6 @@ a.card {
 }
 
 .tags span {
-  background: #eee;
   border: 1px solid #0050d4;
   padding: 4px 18px;
   font-size: 12px;
