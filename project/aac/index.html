@@ -28,12 +28,24 @@
   background: rgb(50 50 50);
 }
 
-body {
-  background-image: url('/images/projects/bk_green.png');
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+nav a {
+  color: #000;
+}
+
+.logo {
+  color: #000;
+}
+
+.logo:hover{
+  color: #1ca06d;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1ca06d;
+}
+
+footer {
+    border: 0 solid #000;
+    border-top-width: 1px;
+    color: #000;
 }
 
 nav a:hover {
@@ -48,10 +60,6 @@ nav a:hover {
   z-index: 1000; /* Ensures the navbar is on top of other elements */
   border-bottom: 1px solid #4b5563;
   transition: all 0.3s ease;
-}
-
-.project-details{
-  background-color: #000;
 }
 
 .nibutton-link {
@@ -125,6 +133,7 @@ nav a:hover {
   color: #000;
   font-weight: bold;
 }
+
 
 @media (max-width: 1270px) {
   .sidebar {

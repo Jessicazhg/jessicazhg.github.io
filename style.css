@@ -32,7 +32,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ededed;
-  background-image: url('images/bk_yellow.png');
+  background-image: url('images/bk_gray.png');
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: fixed;
@@ -43,11 +43,11 @@ body {
 
 ::-moz-selection { /* for firefox */
   color: #ffffff;
-  background: #ee7f00;
+  background: #000
 }
 ::selection { /* for other browser*/
   color: #ffffff; 
-  background: #ee7f00;
+  background: #000;
 }
 
 section {
@@ -70,7 +70,7 @@ section {
   left: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  border-bottom: 1px solid #4b5563;
+  border-bottom: 1px solid #0050d4;
 }
 
 .navbarcontainer.scrolled {
@@ -91,7 +91,7 @@ section {
 
 .headnavcurrent {
   text-decoration: none;
-  color: black;
+  color: #0050d4;
   transition: color 0.3s;
   font-size: 18px;
   font-weight: 300;
@@ -116,19 +116,19 @@ section {
 .logo {
   font-size: 36px;
   font-weight: 500;
+  color: #0050d4;
   margin: 0;
   font-family: 'Vollkorn', serif;
   letter-spacing: 0.5px;
   text-decoration: none;
-  color: black;
   transition: color 0.2s;
   cursor: pointer;
 }
 
 .logo:hover {
-  color: #ee7f00;
+  color: #000;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ee7f00;
+  -webkit-text-stroke-color: #000;
 }
 
 nav ul {
@@ -159,7 +159,7 @@ nav ul li:nth-child(3) {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: #0050d4;
   transition: color 0.3s;
   font-size: 18px;
   font-weight: 400;
@@ -172,10 +172,10 @@ nav a {
 
 nav a:hover {
   outline-offset: 0px;
-  color: #ee7f00;
+  color: #000;
   -webkit-text-stroke-width: 1px;
-  border-bottom: 0 #ee7f00;
-  outline: 3px #ee7f00;
+  border-bottom: 0 #000;
+  outline: 3px #000;
 }
 
 h1 {
@@ -185,6 +185,7 @@ h1 {
   line-height: 82.34%;
   margin-top: 12px;
   margin-bottom: 0px;
+  color: #0050d4;
 }
 
 h2 {
@@ -286,7 +287,7 @@ a.card {
   justify-content: center;
   align-items: flex-end;
   display: flex;
-  border: 0 solid rgba(75,85,99,0.33);
+  border: 0 solid rgba(0,80,212,0.33);
   border-bottom-width: 1px;
 }
 
@@ -306,7 +307,7 @@ a.card {
   font-size: 18px; 
   font-weight: 700; 
   max-width: 1236px; 
-  border: 0 solid #4b5563;
+  border: 0 solid #0050d4;
   border-bottom-width: 1px;
 }
 
@@ -317,14 +318,14 @@ a.card {
 }
 
 .portfolio-categories-centered .current {
-  color: black;
+  color: #0050d4;
   text-decoration: none;
   padding: 10px 20px;
   transition: background-color 0.3s;
 }
 
 .portfolio-categories-centered .not-current {
-  color: black;
+  color: #0050d4;
   text-decoration: none;
   padding: 10px 20px;
   transition: background-color 0.3s;
@@ -391,10 +392,11 @@ a.card {
 .card {
   width: 100%;
   background-color: rgba(237, 237, 237, 0.33);
-  border: 0 solid #4b5563;
+  border: 0 solid #0050d4;
+  outline: 1px solid transparent;
   padding: 16px;
   overflow: hidden;
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out, filter 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, filter 0.3s ease, background-color 0.3s ease;
   filter: grayscale(100%);
   opacity: 0;
   transform: translateY(20px);
@@ -410,17 +412,19 @@ a.card {
   font-weight: 700;
   margin-bottom: 12px;
   margin-top: 12px;
+  color: #0050d4;
 }
 
 .card p {
   margin-bottom: 12px;
   margin-top: 12px;
+  color: #0050d4;
 }
 
 .card:hover {
-  border: 0 solid #000;
-  outline: 1px solid #4b5563;
-  background-color: rgba(237, 237, 237, 0.66);
+  border: 0 solid #0050d4;
+  outline: 1px solid #0050d4;
+  background-color: rgba(237, 237, 237, 1);
   filter: grayscale(0%); 
   
   /* New rules to specifically target the image */
@@ -460,16 +464,18 @@ a.card {
 
 .tags span {
   background: #eee;
-  border: 1px solid #4b5563;
+  border: 1px solid #0050d4;
   padding: 4px 18px;
   font-size: 12px;
+  color: #0050d4;
 }
 
 footer {
   text-align: center;
   padding: 4px 0;
-  border: 0 solid #4b5563;
+  border: 0 solid #0050d4;
   border-top-width: 1px;
+  color: #0050d4;
 }
 
 .image-grid {
@@ -660,8 +666,7 @@ footer {
 }
 
 .workinprogress {
-  background-color: black;
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,7 +686,7 @@ footer {
   font-family: Vollkorn, serif;
   margin-top: 0px;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .wipcontainer p{
@@ -692,23 +697,23 @@ footer {
 /* Style for the Google Slide link */
 .google-slide-link, .nibutton-link {
   display: inline-block;
-  background-color: #722bd3; /* Purple background */
-  color: white;
+  background-color: transparent; /* Purple background */
+  color: black;
   text-decoration: none;
   padding: 20px 40px;
-  margin-top: 20px;
+  margin-top: 16px;
   font-size: 20px;
   transition: all 0.3s ease;
   text-align: center;
   border: none; /* No border */
   border-radius: 0; /* No border radius */
-  border: 2px solid #fff;
+  border: 1px solid black;
 }
 
 /* Hover effect for the Google Slide link */
 .google-slide-link:hover {
-  background-color: white; /* White background on hover */
-  color: #722bd3; /* Purple text on hover */
+  background-color: black; /* White background on hover */
+  color: white; /* Purple text on hover */
 }
 
 .regularwhitebk, .finalwhitebk{
@@ -1419,7 +1424,7 @@ hr {
     flex-direction: column;
     gap: 18px;
     width: 100%;
-    background: #000;
+    background: #0050d4;
     position: absolute;
     top: 56px;
     left: 0;
@@ -1457,6 +1462,7 @@ hr {
     cursor: pointer;
     position: absolute;
     right: 20px;
+    color: #0050d4;
   }
 
   .navbarcontainer{
