@@ -19,8 +19,79 @@
     }
   }
 
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .slide-in {
     animation: slideIn 0.5s ease-out;
+  }
+
+  .slide-in-bottom {
+    animation: slideInFromBottom 0.5s ease-out;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: -48px;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    border: 1.5px solid #0050d4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    transition: all 0.3s ease;
+  }
+
+  .scroll-indicator:hover {
+    background-color: #0050d4;
+  }
+
+  .scroll-indicator:hover::after {
+    border-color: #ededed;
+  }
+
+  .scroll-indicator::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-right: 1.5px solid #0050d4;
+    border-bottom: 1.5px solid #0050d4;
+    transform: rotate(45deg);
+    margin-top: -4px;
+  }
+
+  .appenrently-i-need-another-div-to-center-this {
+    position: relative;
+  }
+
+  @media screen and (max-width: 800px) {
+    .scroll-indicator {
+      display: none;
+    }
   }
   </style>
 </head>
@@ -58,6 +129,7 @@
             <h2>I create intuitive, user-friendly interfaces. As a junior UI/UX designer, I bring a fresh perspective and focus on making every interaction feel natural and easy to use. My goal is to design digital experiences that just make sense to people.</h2>
           </div>
         </div>
+        <div class="scroll-indicator" onclick="scrollToPortfolio()"></div>
       </div>
     </section>
 
@@ -166,19 +238,19 @@
     </section>
 
     <section id="graphic-designs-section" class="portfolio-items" style="display:none;">
-      <div class="image-grid">
+      <div class="image-grid" style="opacity: 0; transform: translateY(40px); transition: opacity 0.5s ease-out, transform 0.5s ease-out;">
           <img src="images/posters/1.png" alt="Graphic Design 1">
           <img src="images/posters/2.png" alt="Graphic Design 2">
           <img src="images/posters/3.png" alt="Graphic Design 3">
           <!-- Add more images as needed -->
       </div>
-      <div class="image-grid">
+      <div class="image-grid" style="opacity: 0; transform: translateY(40px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; transition-delay: 0.1s;">
         <img src="images/posters/4.png" alt="Graphic Design 4">
         <img src="images/posters/5.png" alt="Graphic Design 5">
         <img src="images/posters/6.png" alt="Graphic Design 6">
         <!-- Add more images as needed -->
     </div>
-    <div class="image-grid2">
+    <div class="image-grid2" style="opacity: 0; transform: translateY(40px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; transition-delay: 0.2s;">
       <img src="images/posters/7.png" alt="Graphic Design 7">
       <img src="images/posters/8.png" alt="Graphic Design 8">
       <!-- Add more images as needed -->
@@ -196,7 +268,13 @@
   <script src="js/index.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/drag.js"></script>
-
+  <script>
+    function scrollToPortfolio() {
+      document.querySelector('.portfolio-categories').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+  </script>
 
 </body>
 </html>

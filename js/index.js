@@ -39,6 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.add('visible');
             });
         }
+
+        // Check if graphic designs section is visible and animate its grids
+        const graphicDesignsSection = document.getElementById('graphic-designs-section');
+        if (graphicDesignsSection && graphicDesignsSection.style.display !== 'none') {
+            const imageGrids = graphicDesignsSection.querySelectorAll('.image-grid, .image-grid2');
+            imageGrids.forEach(grid => {
+                grid.style.opacity = '1';
+                grid.style.transform = 'translateY(0)';
+            });
+        }
     }
   
     // Initial check on page load
@@ -84,6 +94,15 @@ function showSection(event, sectionId, linkId) {
         
         const cards = newSection.querySelectorAll('.card');
         cards.forEach(card => card.classList.remove('visible'));
+
+        // Reset graphic designs animations
+        if (sectionId === 'graphic-designs-section') {
+            const imageGrids = newSection.querySelectorAll('.image-grid, .image-grid2');
+            imageGrids.forEach(grid => {
+                grid.style.opacity = '0';
+                grid.style.transform = 'translateY(40px)';
+            });
+        }
         
         // Trigger scroll handler to check visibility
         setTimeout(() => {
