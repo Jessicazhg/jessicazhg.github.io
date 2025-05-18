@@ -185,7 +185,7 @@ h1 {
   line-height: 82.34%;
   margin-top: 12px;
   margin-bottom: 0px;
-  color: #0050d4;
+  color: #000;
 }
 
 h2 {
@@ -308,20 +308,19 @@ a.card {
   font-weight: 700; 
   max-width: 1236px; 
   border: 0 solid #0050d4;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
+  color: #0050d4;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
 }
 
 .portfolio-categories-centered .not-current {
   font-size: 18px; 
   font-weight: 400; 
   max-width: 1236px;
-}
-
-.portfolio-categories-centered .current {
-  color: #0050d4;
-  text-decoration: none;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
+  border: 0 solid transparent;
+  border-bottom-width: 2px;
 }
 
 .portfolio-categories-centered .not-current {
