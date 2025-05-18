@@ -396,8 +396,7 @@ a.card {
   outline: 1px solid transparent;
   padding: 16px;
   overflow: hidden;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out, filter 0.3s ease, background-color 0.3s ease;
-  filter: grayscale(100%);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, background-color 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
 }
@@ -424,26 +423,36 @@ a.card {
 .card:hover {
   border: 0 solid #0050d4;
   outline: 1px solid #0050d4;
-  background-color: rgba(237, 237, 237, 1);
-  filter: grayscale(0%); 
-  
-  /* New rules to specifically target the image */
-  .card-image img {
-    filter: grayscale(0%);
-    opacity: 1;
+  background-color: #ededed;
 }
+
+.card-image {
+  position: relative;
+  width: 100%;
 }
 
 .card-image img {
   width: 100%;
   height: auto;
   display: block;
-  filter: grayscale(100%);
-  opacity: .75;
-  transition: all 0.3s;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
+.card-image img.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
 
+.card:hover .card-image img.default-image {
+  opacity: 0;
+}
+
+.card:hover .card-image img.hover-image {
+  opacity: 1;
+}
 
 .card-front-row .card:nth-of-type(1) .card-image img,
 .card-front-row .card:nth-of-type(2) .card-image img{
