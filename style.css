@@ -412,12 +412,14 @@ a.card {
   margin-bottom: 12px;
   margin-top: 12px;
   color: #0050d4;
+  transition: all 0.3s ease;
 }
 
 .card p {
   margin-bottom: 12px;
   margin-top: 12px;
   color: #0050d4;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
@@ -435,7 +437,7 @@ a.card {
 }
 
 .card:hover .tags span{
-  color: #fff;
+  color: #ededed;
   border: 1px solid #000;
   background: #000;
 }
@@ -478,12 +480,6 @@ a.card {
   font-size: 12px;
   color: #0050d4;
   transition: all 0.3s ease;
-}
-
-.card:hover .tags span{
-  color: #fff;
-  border: 1px solid #000;
-  background: #000;
 }
 
 footer {
