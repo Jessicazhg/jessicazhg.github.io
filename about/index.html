@@ -10,6 +10,9 @@
   <style>
     section h1 {
       text-align: left;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
     
     .line-divider-sec {
@@ -17,6 +20,45 @@
       height: 2px;
       background-color: #0050d4;
       margin: 32px 0;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    .aboutme_2column {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    .aboutmecolumnA {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    .aboutmecolumnA h3 {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    .aboutmecolumnA h2 {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    .aboutmecolumnB {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    .aboutmecolumnB img {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .aboutme_3column {
@@ -40,89 +82,122 @@
       text-transform: uppercase;
       color: #000;
       margin-bottom: 1.25rem;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .aboutme_3column p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin: 0px 0px 6px 0px;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .aboutme_3column a {
       color: #333;
       text-decoration: none;
       transition: color 0.3s ease;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .aboutme_3column a:hover {
       color: #0050d4;
     }
+
+    /* Responsive styles for aboutme_3column */
+    @media screen and (max-width: 1024px) {
+      .aboutme_3column {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .aboutme_3column {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .aboutme_3column h2 {
+        font-size: 20px !important;
+      }
+      
+      .aboutme_3column p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-    <header>
-      <div class="navbarcontainer">
-        <div class="navbarcontainercontainer">
-          <a href="/" class="logo">JZ.</a>
-          <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-          <nav>
-            <ul>
-              <li><a href="/">My Work</a></li>
-              <li><div class="headnavcurrent">About Me</div></li>
-              <li><a href="/resume">My Resumé</a></li>
-            </ul>
-          </nav>
-        </div>
+  <div class="background-container"></div>
+  <header>
+    <div class="navbarcontainer">
+      <div class="navbarcontainercontainer">
+        <a href="/" class="logo">JZ.</a>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="/">My Work</a></li>
+            <li><div class="headnavcurrent">About Me</div></li>
+            <li><a href="/resume">My Resumé</a></li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="aboutme">
-        <h1>About Me</h1>
-          <div class="aboutme_2column">
-              <div class="aboutmecolumnA">
-                <img src="../images/Vectors-Wrapper.svg" alt="Vectorsvg">
-                <h3>HELLO THERE!</h3>
-                <h2>I'm so delighted you dropped by!
-                  <br>
-                  <br>
-                  I grew up between China and Canada, and English has become the bridge between both worlds. With a background in Psychology and Environmental Science, I’ve picked up design and coding along the way to build thoughtful, user-focused digital products.
-                  <br>
-                  <br>
-                  I’m always exploring how tech, creativity, and sustainability can work together.
-                  <br>
-                  <br>
-                  When I’m not designing, you’ll probably find me gaming, messing around with audio mixing, or just looking for my next favorite song.
-                  </h2>
-              </div>
-              <div class="aboutmecolumnB">
-                <img src="../images/Avatar.svg" alt="Avatar">
-              </div>
+  <main>
+    <section class="aboutme">
+      <h1>About Me</h1>
+        <div class="aboutme_2column">
+            <div class="aboutmecolumnA">
+              <img src="../images/Vectors-Wrapper.svg" alt="Vectorsvg">
+              <h3>HELLO THERE!</h3>
+              <h2>I'm so delighted you dropped by!
+                <br>
+                <br>
+                I grew up between China and Canada, and English has become the bridge between both worlds. With a background in Psychology and Environmental Science, I've picked up design and coding along the way to build thoughtful, user-focused digital products.
+                <br>
+                <br>
+                I'm always exploring how tech, creativity, and sustainability can work together.
+                <br>
+                <br>
+                When I'm not designing, you'll probably find me gaming, messing around with audio mixing, or just looking for my next favorite song.
+                </h2>
+            </div>
+            <div class="aboutmecolumnB">
+              <img src="../images/Avatar.svg" alt="Avatar">
+            </div>
+        </div>
+        <div class="line-divider-sec"></div>
+        <div class="aboutme_3column">
+          <div class="contact-column">
+            <h2>Contact Details</h2>
+            <p><a href="mailto:jessjwzhang@gmail.com">jessjwzhang@gmail.com</a></p>
           </div>
-          <div class="line-divider-sec"></div>
-          <div class="aboutme_3column">
-            <div class="contact-column">
-              <h2>Contact Details</h2>
-              <p><a href="mailto:jessjwzhang@gmail.com">jessjwzhang@gmail.com</a></p>
-            </div>
-            <div class="location-column">
-              <h2>Location</h2>
-              <p>Toronto, ON Canada</p>
-              <p id="toronto-time"></p>
-            </div>
-            <div class="socials-column">
-              <h2>Socials</h2>
-              <p><a href="https://github.com/36346" target="_blank">Github</a></p>
-              <p><a href="https://www.behance.net/y3636" target="_blank">Behance</a></p>
-            </div>
+          <div class="location-column">
+            <h2>Location</h2>
+            <p>Toronto, ON Canada</p>
+            <p id="toronto-time"></p>
           </div>
-      </section>
-    </main>
-    
-    <footer>
-      <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
-    </footer>
-    <script src="../js/navigation.js"></script>
-  </body>
-  </html>
+          <div class="socials-column">
+            <h2>Socials</h2>
+            <p><a href="https://github.com/36346" target="_blank">Github</a></p>
+            <p><a href="https://www.behance.net/y3636" target="_blank">Behance</a></p>
+          </div>
+        </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
+  </footer>
+  <script src="../js/navigation.js"></script>
+</body>
+</html>
   

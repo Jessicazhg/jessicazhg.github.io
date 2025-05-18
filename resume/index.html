@@ -12,6 +12,15 @@
       text-align: left;
       margin-top: 12px;
       margin-bottom: 0px;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+    }
+
+    section img {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     body{
@@ -38,6 +47,9 @@
       text-transform: uppercase;
       color: #000;
       margin-bottom: 1.25rem;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     section h3 {
@@ -51,6 +63,9 @@
       color: #555 !important;
       padding: 0 !important;
       margin: -10px 0px 0px 0px !important;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .resume-container {
@@ -101,6 +116,9 @@
       font-size: 15px;
       line-height: 1.2;
       margin-left: 1rem;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .company, .institution {
@@ -109,13 +127,18 @@
       padding-bottom: 4px;
       color: #666;
       text-transform: uppercase;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .description {
       margin: 0;
       line-height: 1.5;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
-
 
     .experience-item ul, .skills-list, .certificates-list {
       padding-left: 1.5rem;
@@ -125,6 +148,9 @@
     .experience-item li, .skills-list li, .certificates-list li {
       margin: 0.5rem 0;
       line-height: 1.4;
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
     }
 
     .skills-section, .certificates-section {
@@ -172,120 +198,121 @@
   </style>
 </head>
 <body>
-    <header>
-      <div class="navbarcontainer">
-        <div class="navbarcontainercontainer">
-          <a href="/" class="logo">JZ.</a>
-          <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-          <nav>
-            <ul>
-              <li><a href="/">My Work</a></li>
-              <li><a href="/about">About Me</a></li>
-              <li><div class="headnavcurrent">My Resumé</div></li>
-            </ul>
-          </nav>
-        </div>
+  <div class="background-container"></div>
+  <header>
+    <div class="navbarcontainer">
+      <div class="navbarcontainercontainer">
+        <a href="/" class="logo">JZ.</a>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="/">My Work</a></li>
+            <li><a href="/about">About Me</a></li>
+            <li><div class="headnavcurrent">My Resumé</div></li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="aboutme">
-        <h1>Jessica Zhang</h1>
-        <img src="../images/Vectors-Wrapper.svg" alt="Vectorsvg">
-        <div class="resume-container">
-          <div class="resume-left">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-              <div class="job-header">
-                <h3>Creative Digital Marketing Intern</h3>
-                <div class="date-location">2023 - Present, SF / REMOTE</div>
-              </div>
-              <p class="company">About Intelligence Inc.</p>
-              <p class="description">Designed the company's brand identity and developed a streamlined product website UI/UX, increasing user retention by 30%. Supported front-end engineering efforts, optimizing site performance by 20%. Created engaging marketing materials that boosted social media engagement by 50%, contributing to a 25% increase in overall digital reach and brand visibility.</p>
+  <main>
+    <section class="aboutme">
+      <h1>Jessica Zhang</h1>
+      <img src="../images/Vectors-Wrapper.svg" alt="Vectorsvg">
+      <div class="resume-container">
+        <div class="resume-left">
+          <h2>Work Experience</h2>
+          <div class="experience-item">
+            <div class="job-header">
+              <h3>Creative Digital Marketing Intern</h3>
+              <div class="date-location">2023 - Present, SF / REMOTE</div>
             </div>
-            <div class="experience-item">
-              <div class="job-header">
-                <h3>Freelance Graphic Designer</h3>
-                <div class="date-location">2022 - Present, REMOTE</div>
-              </div>
-              <p class="company">Upwork, Inc.</p>
-              <p class="description">Designed logos, websites and marketing materials for clients across various industries. Achieves client satisfaction through effective communication and creative solutions.</p>
+            <p class="company">About Intelligence Inc.</p>
+            <p class="description">Designed the company's brand identity and developed a streamlined product website UI/UX, increasing user retention by 30%. Supported front-end engineering efforts, optimizing site performance by 20%. Created engaging marketing materials that boosted social media engagement by 50%, contributing to a 25% increase in overall digital reach and brand visibility.</p>
+          </div>
+          <div class="experience-item">
+            <div class="job-header">
+              <h3>Freelance Graphic Designer</h3>
+              <div class="date-location">2022 - Present, REMOTE</div>
             </div>
-            <div class="experience-item">
-              <div class="job-header">
-                <h3>Social Media Coordinator</h3>
-                <div class="date-location">2020, REMOTE</div>
-              </div>
-              <div class="job-header">
-                <h3>UI/UX Intern</h3>
-                <div class="date-location">2019, BEIJING, CN</div>
-              </div>
-              <p class="company">Beijing Yunshemei Network Technology</p>
-              <p class="description">Developed engaging content for Meicam, Weibo, and WeChat, increasing follower engagement by 40%. Designed intuitive UI/UX improvements that reduced bounce rates by 25% and increased session duration by 30% on Meicam's mobile app and website. Collaborated with marketing and front-end teams to refine branding and streamline navigation, improving click-through rates by 20% across WeChat Mini Programs and Meicam's web platform.</p>
-              </div>
-              <div class="experience-item">
-              <div class="job-header">
-                <h3>Layout Designer</h3>
-                <div class="date-location">2019, TORONTO</div>
-              </div>
-              <p class="company">Varsity Publications Inc.</p>
-              <p class="description">Designed four print editions of the student newspaper at the University of Toronto, collaborated with the editorial team to ensure page designs accurately reflected the content.</p>
+            <p class="company">Upwork, Inc.</p>
+            <p class="description">Designed logos, websites and marketing materials for clients across various industries. Achieves client satisfaction through effective communication and creative solutions.</p>
+          </div>
+          <div class="experience-item">
+            <div class="job-header">
+              <h3>Social Media Coordinator</h3>
+              <div class="date-location">2020, REMOTE</div>
             </div>
-            <div class="skills-section">
+            <div class="job-header">
+              <h3>UI/UX Intern</h3>
+              <div class="date-location">2019, BEIJING, CN</div>
+            </div>
+            <p class="company">Beijing Yunshemei Network Technology</p>
+            <p class="description">Developed engaging content for Meicam, Weibo, and WeChat, increasing follower engagement by 40%. Designed intuitive UI/UX improvements that reduced bounce rates by 25% and increased session duration by 30% on Meicam's mobile app and website. Collaborated with marketing and front-end teams to refine branding and streamline navigation, improving click-through rates by 20% across WeChat Mini Programs and Meicam's web platform.</p>
+          </div>
+          <div class="experience-item">
+            <div class="job-header">
+              <h3>Layout Designer</h3>
+              <div class="date-location">2019, TORONTO</div>
+            </div>
+            <p class="company">Varsity Publications Inc.</p>
+            <p class="description">Designed four print editions of the student newspaper at the University of Toronto, collaborated with the editorial team to ensure page designs accurately reflected the content.</p>
+          </div>
+          <div class="skills-section">
             <h2>Skills</h2>
             <div class="experience-item">
-            <h3>Technical Proficiencies</h3>
-            <p class="description">Adobe Creative Cloud (Photoshop, Illustrator, InDesign, XD), Figma, Sketch, HTML/CSS, JavaScript, Bootstrap, jQuery, CMS (WordPress, Webflow, Shopify), Python, LaTeX, iWork</p>
+              <h3>Technical Proficiencies</h3>
+              <p class="description">Adobe Creative Cloud (Photoshop, Illustrator, InDesign, XD), Figma, Sketch, HTML/CSS, JavaScript, Bootstrap, jQuery, CMS (WordPress, Webflow, Shopify), Python, LaTeX, iWork</p>
             </div>
             <div class="experience-item">
-            <h3>Design & Development</h3>
-            <p class="description">User Interface (UI) Design, User Experience (UX) Design, Usability Testing, A/B Testing, UX Research, User-Centered Design (UCD), Information Architecture, Wireframing, Prototyping, Design Systems, Accessibility (WCAG) 2.0, Heuristic Evaluation, User Flow Mapping,  Responsive Design,  UX Writing</p>
+              <h3>Design & Development</h3>
+              <p class="description">User Interface (UI) Design, User Experience (UX) Design, Usability Testing, A/B Testing, UX Research, User-Centered Design (UCD), Information Architecture, Wireframing, Prototyping, Design Systems, Accessibility (WCAG) 2.0, Heuristic Evaluation, User Flow Mapping,  Responsive Design,  UX Writing</p>
             </div>
             <div class="experience-item">
-            <h3>Languages</h3>
-            <p class="description">English (Full Professional Proficiency), Mandarin (Native), Cantonese (Native)</p>
-            </div>
-            </div>
-          </div>
-          
-          <div class="resume-right">
-            <div class="education-section">
-              <h2>Education</h2>
-              <div class="education-item">
-                <div class="job-header">
-                  <h3>Certificate in UX/UI Design</h3>
-                  <div class="date-location">2023</div>
-                </div>
-                <p class="institution">University of Toronto School of Continuing Studies</p>
-                <p class="description">Focusing on human-centered design principles and understanding user behavior in digital environments.</p>
-              </div>
-                            <div class="education-item">
-                <div class="job-header">
-                  <h3>Honours Bachelor of Science</h3>
-                  <div class="date-location">2022</div>
-                </div>
-                <p class="institution">University of Toronto</p>
-                <p class="description">Major in Psychology</p>
-              </div>
-            </div>
-
-            <div class="certificates-section">
-              <h2>Additional Certificates</h2>
-              <ul class="certificates-list">
-                <li>Meta Front-End Developer Professional Certificate</li>
-                <li>Google IT Automation with Python Professional Certificate</li>
-                <li>Google Professional Certificate in UX Design</li>
-              </ul>
+              <h3>Languages</h3>
+              <p class="description">English (Full Professional Proficiency), Mandarin (Native), Cantonese (Native)</p>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    
-    <footer>
-      <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
-    </footer>
-    <script src="../js/navigation.js"></script>
-  </body>
-  </html>
+        
+        <div class="resume-right">
+          <div class="education-section">
+            <h2>Education</h2>
+            <div class="education-item">
+              <div class="job-header">
+                <h3>Certificate in UX/UI Design</h3>
+                <div class="date-location">2023</div>
+              </div>
+              <p class="institution">University of Toronto School of Continuing Studies</p>
+              <p class="description">Focusing on human-centered design principles and understanding user behavior in digital environments.</p>
+            </div>
+            <div class="education-item">
+              <div class="job-header">
+                <h3>Honours Bachelor of Science</h3>
+                <div class="date-location">2022</div>
+              </div>
+              <p class="institution">University of Toronto</p>
+              <p class="description">Major in Psychology</p>
+            </div>
+          </div>
+
+          <div class="certificates-section">
+            <h2>Additional Certificates</h2>
+            <ul class="certificates-list">
+              <li>Meta Front-End Developer Professional Certificate</li>
+              <li>Google IT Automation with Python Professional Certificate</li>
+              <li>Google Professional Certificate in UX Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
+  </footer>
+  <script src="../js/navigation.js"></script>
+</body>
+</html>
   

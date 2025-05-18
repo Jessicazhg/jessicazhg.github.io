@@ -16,7 +16,6 @@ window.addEventListener('scroll', function() {
 // Back to Top Button
 const backToTopButton = document.createElement('button');
 backToTopButton.className = 'back-to-top';
-backToTopButton.innerHTML = '↑';
 document.body.appendChild(backToTopButton);
 
 window.addEventListener('scroll', () => {
