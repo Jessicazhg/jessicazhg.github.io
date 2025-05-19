@@ -50,9 +50,13 @@
     }
   }
 
-
-  .appenrently-i-need-another-div-to-center-this {
-    position: relative;
+  .hero2column {
+    width: 100%;
+    gap: 24px;
+    flex: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
   }
 
   @media screen and (max-width: 800px) {
@@ -100,10 +104,15 @@
     }
   }
 
+  h1 {
+    line-height: 90%;
+  }
+
   .selection-frame {
     position: relative;
     display: inline-block;
     padding: 8px 4px;
+    width: min-content;
   }
 
   .selection-frame::before {
@@ -174,6 +183,27 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .herocolumnA {
+    width: min-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .withinheroclumnA {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    white-space: nowrap;
+  }
+
+  .withinheroclumnA img,
+  .withinheroclumnA h2 {
+    flex-shrink: 0;
+  }
+
   </style>
 </head>
 
@@ -202,10 +232,10 @@
           <div class="herocolumnA">
             <div class="withinheroclumnA">
               <img src="images/Vectors-Wrapper.svg" alt="Vectorsvg">
-              <h2>Hi, I am Jessica Zhang</h2>
+              <h2>Hi, I am Jessica Zhang, a</h2>
             </div>
             <h1 class="selection-frame">
-              UI / UX Designer
+              Product Designer
               <span class="handle handle-top-right"></span>
               <span class="handle handle-bottom-right"></span>
               <span class="handle handle-bottom-left"></span>
