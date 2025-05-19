@@ -348,6 +348,7 @@ a.card {
   line-height: 18px;
   display: flex;
   position: relative;
+  isolation: isolate;
   z-index: 2;
 }
 
@@ -638,6 +639,9 @@ footer {
   box-sizing: border-box; /* Include padding and border in the element's total width */
   padding: 0; /* Remove any default padding */
   margin: 0; /* Remove any default margin */
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .project-hero-content img {
@@ -655,6 +659,10 @@ footer {
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
+  font-size: 0.9rem;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .project-details-container {
@@ -662,6 +670,9 @@ footer {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .project-details-left, .project-details-right {
@@ -796,6 +807,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .finalwhitebk{
@@ -828,8 +842,9 @@ footer {
 }
 
 .regulartextarea, .regulartextareaproto {
+  isolation: isolate;
   position: relative;
-  z-index: 0;
+  z-index: 2;
 }
 
 .regulartextarea p, .regulartextarea ul, .regulartextarea a, .regulartextareaproto p{
@@ -874,6 +889,9 @@ footer {
   width: 100%;
   text-align: center;
   max-width: none;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .nicontainer {
@@ -912,6 +930,9 @@ footer {
   text-align: center;
   margin: 0 auto;
   max-width: none;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .line-divider {
@@ -930,6 +951,9 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: #ededed;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .waybackmachine img, .final img{
@@ -1099,6 +1123,9 @@ footer {
   padding: 20px;
   /* border-radius: 8px;*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .three-column-box h3 {
@@ -1217,6 +1244,14 @@ hr {
 .footer-left, .footer-right {
   display: inline-block;
 }
+
+.regularblackbk {
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
+}
+
+
 
 @media (max-width: 1240px) {
   
@@ -1866,9 +1901,6 @@ hr {
     margin-bottom: 1rem;
 }
 
-.project-details {
-    font-size: 0.9rem;
-}
 
 .view-project {
     display: inline-block;
@@ -2177,10 +2209,10 @@ hr {
 }
 
 .hero-section {
-    position: relative;
-    width: 100%;
-    overflow: visible;
-    z-index: 1;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  z-index: 1;
 }
 
 .hero-section::before {
