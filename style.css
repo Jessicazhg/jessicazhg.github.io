@@ -19,6 +19,15 @@ html {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 header {
   height: 96px;
   width: 100%;
@@ -156,7 +165,7 @@ section {
   font-family: 'Vollkorn', serif;
   letter-spacing: 0.5px;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -195,7 +204,7 @@ nav ul li:nth-child(3) {
 nav a {
   text-decoration: none;
   color: #0050d4;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
   font-size: 18px;
   font-weight: 400;
   padding: 10px 10px;
@@ -237,7 +246,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 64px;
   display: flex;
 }
 
@@ -247,7 +256,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 32px 0px;
+  padding: 48px 0px 92px 0px;
   display: flex;
   position: relative;
 }
@@ -315,7 +324,7 @@ a.card {
 
 .portfolio-categories {
   width: 100%;
-  height: 180px;
+  height: 120px;
   grid-column-gap: 340px;
   grid-row-gap: 340px;
   justify-content: center;
@@ -1197,6 +1206,18 @@ hr {
   margin: 0;
 }
 
+.footer-content {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0px 12px 0px;
+}
+
+.footer-left, .footer-right {
+  display: inline-block;
+}
+
 @media (max-width: 1240px) {
   
   .card-front-row, .card-second-row {
@@ -1295,6 +1316,10 @@ hr {
     margin-top: 19px;
     min-height: auto;
     padding: 16px 0;
+  }
+
+  .appenrently-i-need-another-div-to-center-this{
+    padding: 16px 0px 40px 0px;
   }
 
   .aboutme_2column {
@@ -1490,6 +1515,13 @@ hr {
     height: 72px;
   }
   
+  .appenrently-i-need-another-div-to-center-this{
+    padding-bottom: 32px;
+  }
+
+  .portfolio-categories{
+    height: 50px;
+  }
 
   .hero2column{
     grid-row-gap: 28px;
@@ -1508,15 +1540,46 @@ hr {
     flex-direction: column;
     gap: 18px;
     width: 100%;
-    background: #0050d4;
+    background: linear-gradient(to bottom, rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.98));
     position: absolute;
     top: 56px;
     left: 0;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transform: translateY(-73px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-bottom: 1px solid #0050d4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     align-items: flex-start;
+    isolation: isolate;
+  }
+
+  nav ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bk_nav.png');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  nav ul::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/grain.png');
+    background-size: 128px;
+    background-repeat: repeat;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    z-index: -1;
   }
 
   nav ul li {
@@ -1525,7 +1588,7 @@ hr {
   }
 
   nav a{
-    color: #fff;
+    color: #0050d4;
     text-align: left;
     width: auto;
     padding: 10px 0;
@@ -1535,18 +1598,42 @@ hr {
 
   nav ul.active {
     display: flex;
-    animation: slideDown 0.3s forwards;
+    animation: fadeIn 0.3s forwards;
   }
 
   .hamburger {
-    display: block;
-    font-size: 24px;
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
     right: 20px;
-    color: #0050d4;
+    padding: 0;
+    width: 24px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0050d4;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 
   .navbarcontainer{
@@ -1559,7 +1646,7 @@ hr {
 
   .headnavcurrent{
     padding: 10px 0;
-    color: #fff;
+    color: #0050d4;
     text-align: left;
     width: auto;
     height: auto;
@@ -1572,7 +1659,6 @@ hr {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    padding: 10px 0;
     scroll-behavior: smooth;
   }
 
@@ -1582,6 +1668,11 @@ hr {
   }
   .image-row-4-non {
     row-gap: 36px;
+  }
+
+  .footer-content {
+    font-size: 16px;
+    gap: 16px;
   }
 
 }
@@ -1609,6 +1700,9 @@ hr {
     grid-row-gap: 28px;
   }
 
+  .appenrently-i-need-another-div-to-center-this{
+    padding-bottom: 24px;
+  }
 
   .heroimage h1 {
     font-size: 72px;
@@ -1645,6 +1739,12 @@ hr {
   .card p{
     font-size: 15px;
   }
+
+  .footer-content {
+    font-size: 14px;
+    gap: 12px;
+  }
+
 }
 @media (max-width: 430px) {
   .tags{
@@ -1652,6 +1752,21 @@ hr {
   }
   .tags span{
     padding: 4px 8px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-left: 20px;
+    justify-content: flex-start;
+    margin: 8px 0px 8px 0px;
+  }
+
+  .footer-left, .footer-right {
+    display: block;
+    width: 100%;
+    text-align: left;
   }
 }
 
@@ -1666,6 +1781,10 @@ hr {
 @media (max-width: 340px) {
   .heroimage {
     padding-top: 16px;
+  }
+
+  .appenrently-i-need-another-div-to-center-this{
+    padding-bottom: 16px;
   }
   
   .heroimage h1 {
@@ -2019,7 +2138,7 @@ hr {
 
 .scroll-indicator {
   position: absolute;
-  bottom: -80px;
+  bottom: -40px;
   right: 0;
   width: 72px;
   height: 72px;
@@ -2055,4 +2174,24 @@ hr {
   isolation: isolate;
   position: relative;
   z-index: 2;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/grid.svg');
+    background-repeat: repeat;
+    background-size: 80px 80px;
+    background-position: 0 -4px;
+    -webkit-mask-image: radial-gradient(ellipse at 5% center, black 30%, transparent 85%);
+    mask-image: radial-gradient(ellipse at 5% center, black 30%, transparent 85%);
+    z-index: -1;
 }

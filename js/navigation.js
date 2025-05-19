@@ -1,6 +1,8 @@
 function toggleMenu() {
     var nav = document.querySelector('nav ul');
+    var hamburger = document.querySelector('.hamburger');
     nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
 }
 
 // Add scroll event listener

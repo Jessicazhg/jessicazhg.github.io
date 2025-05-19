@@ -18,29 +18,10 @@
   background: rgb(50 50 50);
 }
 
-nav a {
-  color: #000;
-}
-
-.logo {
-  color: #000;
-}
-
-.logo:hover{
-  color: #2f3cb4;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #2f3cb4;
-}
-
 footer {
     border: 0 solid #000;
     border-top-width: 1px;
     color: #000;
-}
-
-nav a:hover {
-  color: #2f3cb4;
-  outline: 3px #2f3cb4;
 }
 
 .navbarcontainer {
@@ -130,6 +111,39 @@ nav a:hover {
   z-index: 2;
 }
 
+.hamburger {
+  color: #000;
+}
+
+.hamburger span {
+  background-color: #000;
+}
+
+@media (max-width: 560px) {
+  nav ul {
+    border-bottom: 1px solid #000;
+  }
+}
+
+nav a {
+  color: #202020;
+}
+
+.logo {
+  color: #202020;
+}
+
+nav ul::before{
+  background-image: url('../../images/bk_navbnw.png');
+  opacity: 0.5;
+}
+
+.logo:hover{
+  color: #000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
 </style>
 
 <body class="voyager-vertex-page">
@@ -137,7 +151,11 @@ nav a:hover {
     <header class="navbarcontainer">
         <div class="navbarcontainercontainer">
             <a href="/" class="logo">JZ.</a>
-            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <button class="hamburger" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
             <nav>
               <ul>
                 <li><a href="/">My Work</a></li>
@@ -192,7 +210,10 @@ nav a:hover {
       </section>
     </main>
     <footer>
-      <p>&copy; 2025 Jessica Zhang. All Rights Reserved.</p>
+      <div class="footer-content">
+        <div class="footer-left">Designed and built by Jessica Zhang</div>
+        <div class="footer-right">© All rights reserved</div>
+      </div>
     </footer>
     <script src="../../js/navigation.js"></script>
   </body>
