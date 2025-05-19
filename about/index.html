@@ -19,101 +19,39 @@
       width: 100%;
       height: 2px;
       background-color: #0050d4;
-      margin: 32px 0;
+      margin: 48px 0;
       isolation: isolate;
       position: relative;
       z-index: 2;
     }
 
-    .aboutme_2column {
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
+    .contact-box h3, .contact-box .contact-detail{
+      margin: 0;
+      padding: 0;
     }
 
-    .aboutmecolumnA {
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutmecolumnA h3 {
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutmecolumnA h2 {
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutmecolumnB {
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutmecolumnB img {
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutme_3column {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 60px;
-      margin-top: 20px;
-      width: 100%;
-    }
-
-    .contact-column, .location-column, .socials-column {
-      width: 100%;
-      text-align: left;
-    }
-
-    .aboutme_3column h2 {
-      font-weight: 600 !important;
-      font-style: normal;
-      line-height: 1.2em;
-      font-size: 24px !important;
-      text-transform: uppercase;
-      color: #000;
-      margin-bottom: 1.25rem;
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutme_3column p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 0px 0px 6px 0px;
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
-    }
-
-    .aboutme_3column a {
-      color: #333;
+    .contact-box {
       text-decoration: none;
-      transition: color 0.3s ease;
-      isolation: isolate;
-      position: relative;
-      z-index: 2;
+      color: inherit;
     }
 
-    .aboutme_3column a:hover {
+    .contact-box .contact-detail {
       color: #0050d4;
     }
 
-    /* Responsive styles for aboutme_3column */
+    .contact-box .contact-detail p {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .contact-box .contact-detail p:first-child {
+      margin-bottom: 4px;
+    }
+
+    /* Responsive styles for aboutme_2column */
     @media screen and (max-width: 1024px) {
-      .aboutme_3column {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+      .aboutme_2column {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -130,6 +68,17 @@
       .aboutme_3column p {
         font-size: 1rem;
       }
+
+    @media (max-width: 640px) {
+      .connect-section h1 {
+        line-height: 1;
+      }
+    }
+    @media (max-width: 620px) {
+      .line-divider-sec{
+        margin: 16px 0px;
+      }
+    }
     }
   </style>
 </head>
@@ -179,20 +128,48 @@
             </div>
         </div>
         <div class="line-divider-sec"></div>
-        <div class="aboutme_3column">
-          <div class="contact-column">
-            <h2>Contact Details</h2>
-            <p><a href="mailto:jessjwzhang@gmail.com">jessjwzhang@gmail.com</a></p>
-          </div>
-          <div class="location-column">
-            <h2>Location</h2>
-            <p>Toronto, ON Canada</p>
-            <p id="toronto-time"></p>
-          </div>
-          <div class="socials-column">
-            <h2>Socials</h2>
-            <p><a href="https://github.com/36346" target="_blank">Github</a></p>
-            <p><a href="https://www.behance.net/y3636" target="_blank">Behance</a></p>
+        <div class="connect-section">
+          <h1>Let's Connect & Create!</h1>
+          <img src="../images/Vectors-Wrapper.svg" alt="Vectorsvg">
+          <div class="contact-boxes">
+            <a href="mailto:ser@drrr.us" class="contact-box">
+              <div class="icon"><img src="../images/icons/email.svg" alt="Email icon"></div>
+              <div class="text">
+                <h3>EMAIL</h3>
+                <div class="contact-detail">ser@drrr.us</div>
+              </div>
+            </a>
+            <a href="https://github.com/jessicazhg" target="_blank" class="contact-box">
+              <div class="icon"><img src="../images/icons/github.svg" alt="GitHub icon"></div>
+              <div class="text">
+                <h3>GITHUB</h3>
+                <div class="contact-detail">@Jessicazhg</div>
+              </div>
+            </a>
+            <div class="contact-box">
+              <div class="icon"><img src="../images/icons/location.svg" alt="Location icon"></div>
+              <div class="text">
+                <h3>LOCATION</h3>
+                <div class="contact-detail">
+                  <p>Toronto, Canada</p>
+                  <p id="toronto-time"></p>
+                </div>
+              </div>
+            </div>
+            <a href="https://www.behance.net/-" target="_blank" class="contact-box">
+              <div class="icon"><img src="../images/icons/behance.svg" alt="Behance icon"></div>
+              <div class="text">
+                <h3>BEHANCE</h3>
+                <div class="contact-detail">@placeholder</div>
+              </div>
+            </a>
+            <a href="https://chat.google.com" target="_blank" class="contact-box">
+              <div class="icon"><img src="../images/icons/googlechat.svg" alt="Google Chat icon"></div>
+              <div class="text">
+                <h3>GOOGLE CHAT</h3>
+                <div class="contact-detail">jessjwzhang</div>
+              </div>
+            </a>
           </div>
         </div>
     </section>

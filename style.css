@@ -310,11 +310,17 @@ h2 {
   align-items: flex-start;
   padding: 16px 24px 24px;
   display: flex;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutmecolumnB img {
   width: 450px;
   height: auto;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 a.card {
@@ -603,6 +609,9 @@ footer {
   grid-row-gap: 24px;
   align-items: flex-start;
   display: flex;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutmecolumnA{
@@ -611,6 +620,9 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   display: flex;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutme h3{
@@ -619,6 +631,9 @@ footer {
   line-height: 33px;
   margin-bottom: 0px;
   padding-top: 16px;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutme h2{
@@ -626,6 +641,9 @@ footer {
   font-weight: 400;
   margin-top: 0px;
   line-height: 1.5em;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
 }
 
 .project-hero {
@@ -1251,7 +1269,99 @@ hr {
   z-index: 2;
 }
 
+    .connect-section {
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
 
+    .connect-section h1 {
+      text-align: left;
+    }
+
+    .contact-box .icon img {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
+    .contact-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .contact-box {
+      flex: 1;
+      min-width: 0;
+      padding: 18px 20px;
+      border: 1px solid #0050d4;
+      display: flex;
+      align-items: center; /* Center vertically */
+      gap: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-box:hover {
+      background-color: rgba(0, 80, 212, 0.15);
+    }
+
+    .contact-box .icon {
+      font-size: 24px;
+      align-items: center;
+    }
+
+    .contact-box .text {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .contact-box h3,
+    .contact-box .contact-detail {
+      margin: 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: left;
+      color: #0050d4;
+      line-height: 1.3;
+    }
+
+    .contact-box .contact-detail {
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      opacity: 0;
+      pointer-events: none;
+      text-transform: none;
+    }
+
+    .contact-box:hover h3 {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .contact-box:hover .contact-detail {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .contact-box a:hover {
+      color: #0050d4;
+    }
 
 @media (max-width: 1240px) {
   
@@ -1417,6 +1527,14 @@ hr {
 
   .icon-svg {
     padding: 10px;
+  }
+
+  .contact-boxes {
+    flex-direction: column;
+  }
+      
+  .contact-box {
+    width: 100%;
   }
 }
 
