@@ -486,22 +486,22 @@ a.card {
 
 .card:hover {
   border: 0 solid #0050d4;
-  outline: 1px solid #000;
-  background-color: rgba(237, 237, 237, 1);
+  outline: 1px solid #0050d4;
+  background-color: rgba(0, 80, 212, 0.15);
 }
 
 .card:hover h2{
-  color: #000;
+  color: #0050d4;
 }
 
 .card:hover p{
-  color: #000;
+  color: #0050d4;
 }
 
 .card:hover .tags span{
   color: #ededed;
-  border: 1px solid #000;
-  background: #000;
+  border: 1px solid #0050d4;
+  background: #0050d4;
 }
 
 .card-image img {
@@ -777,44 +777,97 @@ footer {
 
 .wipcontainer {
   max-width: 1200px;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   gap: 4px;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
 }
 
-.wipcontainer h2{
-  font-size: 36px;
+.wip-content {
+  flex: 2;
+  min-width: 0;
+  padding-right: 48px;
+}
+
+.wip-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.wip-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #0050d4;
+}
+
+.wip-content h2 {
+  font-size: 64px;
   font-family: Vollkorn, serif;
   margin-top: 0px;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.25;
 }
 
-.wipcontainer p{
-  font-size: 20px;
+.wip-title-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.25;
+}
+
+.work-in {
+  font-size: 48px;
+  line-height: 1.25;
+}
+
+.progress {
+  font-size: 64px;
+  line-height: 1;
+  margin-top: -8px;
+}
+
+.wip-content h2 span.italic {
+  font-style: italic;
+  display: inline;
+}
+
+#wip-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.wip-content p {
+  font-size: 18px;
   margin-bottom: 24px;
+  line-height: 1.5;
+  max-width: 800px;
 }
 
 /* Style for the Google Slide link */
-.google-slide-link, .nibutton-link {
+.google-slide-link {
   display: inline-block;
-  background-color: transparent; /* Purple background */
-  color: black;
+  background-color: transparent;
+  color: #0050d4;
   text-decoration: none;
   padding: 20px 40px;
   margin-top: 16px;
   font-size: 20px;
   transition: all 0.3s ease;
   text-align: center;
-  border: none; /* No border */
-  border-radius: 0; /* No border radius */
-  border: 1px solid black;
+  border: 1px solid #0050d4;
 }
 
-/* Hover effect for the Google Slide link */
 .google-slide-link:hover {
-  background-color: black; /* White background on hover */
-  color: white; /* Purple text on hover */
+  background-color: rgba(0, 80, 212, 0.15);
+  color: #0050d4;
 }
 
 .regularwhitebk, .finalwhitebk{
@@ -934,6 +987,8 @@ footer {
   font-size: 20px;
   margin-bottom: 30px;
 }
+
+
 
 /* Hover effect for the Google Slide link */
 .nibutton-link:hover {
@@ -1383,6 +1438,7 @@ hr {
     z-index: -1;
 }
 
+
 @media (max-width: 1240px) {
   
   .card-front-row, .card-second-row {
@@ -1422,6 +1478,13 @@ hr {
     font-size: 128px;
   }
 
+  .wipcontainer {
+    gap: 32px;
+  }
+  
+  .wip-content {
+    padding-right: 32px;
+  }
 }
 
 @media (max-width: 1160px) {
@@ -1556,6 +1619,19 @@ hr {
   .contact-box {
     width: 100%;
   }
+
+  .wipcontainer {
+    gap: 24px;
+  }
+
+  .wip-content {
+    padding-right: 24px;
+  }
+
+  .wip-image {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 898px) {
@@ -1618,18 +1694,28 @@ hr {
 
 }
 
-@media (max-width: 630px) {
-  .portfolio-categories-centered {
-    grid-column-gap: 8px;
-  }
-  .image-row, .image-row-3 {
-    grid-template-columns: 1fr;
-    gap: 8px;
+@media (max-width: 780px) {
+  .wip-image {
+    display: none;
   }
 
-  .project-details-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .wip-content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 630px) {
+  .wipcontainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .wip-content {
+    padding-right: 0;
+  }
+
+  .wip-image img {
+    max-width: 600px !important;
   }
 }
 
@@ -1673,6 +1759,15 @@ hr {
 
   .image-item p {
     font-size: 13px;
+  }
+
+  .wipcontainer {
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .wip-image img {
+    max-width: 100%;
   }
 }
 
