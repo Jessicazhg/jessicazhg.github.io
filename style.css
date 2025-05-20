@@ -256,7 +256,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 48px 0px 92px 0px;
+  padding: 48px 0px 132px 0px;
   display: flex;
   position: relative;
 }
@@ -330,7 +330,7 @@ a.card {
 
 .portfolio-categories {
   width: 100%;
-  height: 120px;
+  height: 80px;
   grid-column-gap: 340px;
   grid-row-gap: 340px;
   justify-content: center;
@@ -1363,6 +1363,26 @@ hr {
       color: #0050d4;
     }
 
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/grid.svg');
+    background-repeat: repeat;
+    background-size: 80px 80px;
+    background-position: -4px -4px;
+    -webkit-mask-image: radial-gradient(ellipse at 5% 50%, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse at 5% 50%, black 40%, transparent 80%);
+    z-index: -1;
+}
+
 @media (max-width: 1240px) {
   
   .card-front-row, .card-second-row {
@@ -1464,7 +1484,7 @@ hr {
   }
 
   .appenrently-i-need-another-div-to-center-this{
-    padding: 16px 0px 40px 0px;
+    padding: 16px 0px 24px 0px;
   }
 
   .aboutme_2column {
@@ -1666,6 +1686,10 @@ hr {
 @media (max-width: 560px) {
   header{
     height: 72px;
+  }
+
+  .hero-section::before {
+    background-size: 64px 64px;
   }
   
   .appenrently-i-need-another-div-to-center-this{
@@ -1898,6 +1922,9 @@ hr {
     gap: 12px;
   }
 
+  .hero-section::before {
+    background-size: 56px 56px;
+  }
 }
 @media (max-width: 430px) {
   .tags{
@@ -1921,6 +1948,7 @@ hr {
     width: 100%;
     text-align: left;
   }
+
 }
 
 @media (max-width: 370px) {
@@ -1934,6 +1962,10 @@ hr {
 @media (max-width: 340px) {
   .heroimage {
     padding-top: 16px;
+  }
+
+  .hero-section::before {
+    background-size: 48px 48px;
   }
 
   .appenrently-i-need-another-div-to-center-this{
@@ -2288,7 +2320,7 @@ hr {
 
 .scroll-indicator {
   position: absolute;
-  bottom: -40px;
+  bottom: -0px;
   right: 0;
   width: 72px;
   height: 72px;
@@ -2324,24 +2356,4 @@ hr {
   isolation: isolate;
   position: relative;
   z-index: 2;
-}
-
-.hero-section {
-  position: relative;
-  width: 100%;
-  overflow: visible;
-  z-index: 1;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('images/grid.svg');
-    background-repeat: repeat;
-    background-size: 80px 80px;
-    background-position: 0 -4px;
-    -webkit-mask-image: radial-gradient(ellipse at 5% center, black 30%, transparent 85%);
-    mask-image: radial-gradient(ellipse at 5% center, black 30%, transparent 85%);
-    z-index: -1;
 }
