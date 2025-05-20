@@ -448,8 +448,8 @@ a.card {
 }
 
 .portfolio-categories-centered .not-current:hover {
-  color: white;
-  background-color: #0050d4;
+  color: #0050d4;
+  background-color: rgba(0, 80, 212, 0.15);
 }
 
 .portfolio-items {
@@ -543,7 +543,7 @@ a.card {
 .card:hover {
   border: 0 solid #0050d4;
   outline: 1px solid #0050d4;
-  background-color: rgba(0, 80, 212, 0.15);
+  background-color: rgba(0, 80, 212, 0.125);
 }
 
 .card:hover h2{
@@ -2529,11 +2529,11 @@ hr {
 }
 
 .scroll-indicator:hover {
-  background-color: #0050d4;
+  background-color: rgba(0, 80, 212, 0.15);
 }
 
 .scroll-indicator:hover::after {
-  border-color: #ededed;
+  border-color: #0050d4;
 }
 
 .scroll-indicator::after {
