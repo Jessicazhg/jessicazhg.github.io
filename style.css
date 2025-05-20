@@ -1,5 +1,57 @@
 * {
   box-sizing: border-box;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230050d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 19L5 5'/%3E%3Cpath d='M5 19V5H19'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+*[style*="cursor: pointer"],
+*[style*="cursor:pointer"],
+p, h1, h2, h3,
+.card,
+.card:hover,
+.card h2,
+.card p,
+.card .tags,
+.card .tags span,
+.card-image,
+.card-image:hover,
+.card-image img,
+.card-image img:hover,
+.image-item,
+.image-item:hover,
+.image-item img,
+.image-item img:hover,
+.comparison-column-onclick,
+.comparison-column-onclick:hover,
+.comparison-column-onclick img,
+.comparison-column-onclick img:hover,
+.lightbox,
+.lightbox:hover,
+.lightbox-content,
+.lightbox-content:hover,
+.lightbox img,
+.lightbox img:hover,
+.close,
+.close:hover,
+.contact-box,
+.contact-box:hover,
+.google-slide-link,
+.google-slide-link:hover,
+.nibutton-link,
+.nibutton-link:hover,
+.back-to-top,
+.back-to-top:hover,
+.scroll-indicator,
+.scroll-indicator:hover,
+a:hover,
+button:hover,
+[role="button"]:hover,
+.clickable:hover,
+[cursor="pointer"]:hover {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230050d4;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230030a0;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23grad)'/%3E%3Cpath d='M16 11v10M11 16h10' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='16' cy='16' r='2' fill='white'/%3E%3C/svg%3E") 16 16, pointer !important;
+}
+
+p, h1, h2, h3, ul li {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230050d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v18M10 3h4M10 21h4'/%3E%3C/svg%3E") 12 12, text !important;
 }
 
 html {
@@ -44,6 +96,7 @@ body {
   position: relative;
   overscroll-behavior-y: none;
   -webkit-overflow-scrolling: touch;
+  animation: fadeIn 0.35s ease-in;
 }
 
 .background-container {
@@ -131,6 +184,8 @@ section {
   justify-content: space-between;
   align-items: center;
   display: flex;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in 0.4s forwards;
 }
 
 .headnavcurrent {
@@ -458,9 +513,10 @@ a.card {
   outline: 1px solid rgba(0,80,212,1);
   padding: 16px;
   overflow: hidden;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out, background-color 0.3s ease;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   opacity: 0;
   transform: translateY(20px);
+  cursor: pointer;
 }
 
 .card.visible {
@@ -523,9 +579,9 @@ a.card {
   height: 450px;
 }
 
-.card-second-row .card:nth-of-type(1) .card-image img,
-.card-second-row .card:nth-of-type(2) .card-image img,
-.card-second-row .card:nth-of-type(3) .card-image img{
+.card-second-row .card:nth-child(1) .card-image img,
+.card-second-row .card:nth-child(2) .card-image img,
+.card-second-row .card:nth-child(3) .card-image img{
   aspect-ratio: auto;
   height: 340px;
 }
@@ -869,6 +925,23 @@ footer {
   color: #0050d4;
 }
 
+.nibutton-link {
+  display: inline-block;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+  padding: 16px 32px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.nibutton-link:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #000;
+}
+
 .regularwhitebk, .finalwhitebk{
   background-color: #ededed;
   max-width: none;
@@ -987,13 +1060,6 @@ footer {
   margin-bottom: 30px;
 }
 
-
-
-/* Hover effect for the Google Slide link */
-.nibutton-link:hover {
-  background-color: black; /* White background on hover */
-  color: white; /* Purple text on hover */
-}
 
 .line-divider-sec{
   background-color: #ededed;
@@ -2280,7 +2346,7 @@ hr {
 .card {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.3s;
+  transition: all 0.35s;
 }
 
 .card.visible {
@@ -2289,13 +2355,23 @@ hr {
 }
 
 /* Add delay for each card in the second row */
-.card-second-row .card:nth-child(1) { transition-delay: 0.05s; }
-.card-second-row .card:nth-child(2) { transition-delay: 0.1s; }
-.card-second-row .card:nth-child(3) { transition-delay: 0.15s; }
+.card-second-row .card:nth-child(1) { 
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out 0.05s, background-color 0.3s ease;
+}
+.card-second-row .card:nth-child(2) { 
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out 0.1s, background-color 0.3s ease;
+}
+.card-second-row .card:nth-child(3) { 
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out 0.15s, background-color 0.3s ease;
+}
 
 /* Add delay for each card in the front row */
-.card-front-row .card:nth-child(1) { transition-delay: 0.05s; }
-.card-front-row .card:nth-child(2) { transition-delay: 0.1s; }
+.card-front-row .card:nth-child(1) { 
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out 0.05s, background-color 0.3s ease;
+}
+.card-front-row .card:nth-child(2) { 
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out 0.1s, background-color 0.3s ease;
+}
 
 .back-to-top {
   position: fixed;
@@ -2464,4 +2540,17 @@ hr {
   isolation: isolate;
   position: relative;
   z-index: 2;
+}
+
+.mouse-gradient {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(130, 175, 182, 0.3) 0%, rgba(130, 175, 182, 0) 70%);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s ease;
 }
