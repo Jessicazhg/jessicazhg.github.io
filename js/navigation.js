@@ -91,7 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
   updateSidebarVisibility();
 });
 
-// Update Toronto time
+/* ===========================
+   Toronto clock (parked for later)
+   ===========================
 function updateTorontoTime() {
   const torontoTime = document.getElementById('toronto-time');
   if (torontoTime) {
@@ -106,7 +108,27 @@ function updateTorontoTime() {
     torontoTime.textContent = time;
   }
 }
+// setInterval(updateTorontoTime, 1000);
+// updateTorontoTime();
+*/
 
-// Update time every second
-setInterval(updateTorontoTime, 1000);
-updateTorontoTime(); // Initial call
+/* ===========================
+   HK-only clock (live)
+   =========================== */
+function updateHKTime() {
+  const el = document.getElementById('hk-time'); // reuse existing id
+  if (!el) return;
+  const options = {
+    timeZone: 'Asia/Hong_Kong',
+    hour12: true,
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  const time = new Date().toLocaleTimeString('en-US', options);
+  el.textContent = `${time} HKT`;
+}
+
+setInterval(updateHKTime, 1000);
+updateHKTime();
+
